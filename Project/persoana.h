@@ -1,0 +1,6 @@
+#ifndef PERSOANA_H_INCLUDED
+#define PERSOANA_H_INCLUDED
+
+
+
+#endif // PERSOANA_H_INCLUDED
