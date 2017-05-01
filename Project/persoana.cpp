@@ -54,5 +54,5 @@ void Persoana::search_followers(string x)
 
 void chat(Persoana *a, Persoana *b, int minute)
 {
-
+	minute++;
 }
