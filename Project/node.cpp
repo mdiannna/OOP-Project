@@ -7,7 +7,7 @@ using namespace std;
 
 void node::search(const char *v)
 {
-    if(this==nullptr)
+    if(this==NULL)
     {
         cout<<"none\n";
         return;
@@ -35,7 +35,7 @@ void node::search(const char *v)
 
 bool node::find(const char *v)
 {
-    if(this==nullptr)
+    if(this==NULL)
         return 0;
 
     if(v[0]==0)
