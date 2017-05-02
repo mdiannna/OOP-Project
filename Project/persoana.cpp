@@ -19,11 +19,11 @@ mutex Persoana:: global_mutex;
 
 Persoana::Persoana(string nume)
 {
+    Persoana::global_mutex.lock(); //deci a fost degeaba impartirea pe thread-uri, dar macar se vede ca merge lock si unlock
     while(exist[nume])
     {
         nume=nume+"$";
     }
-    Persoana::global_mutex.lock();
 
     Persoana::no_pers++;
     exist[nume]=no_pers;
@@ -32,10 +32,12 @@ Persoana::Persoana(string nume)
     name=nume;
     indice=no_pers;
 
-    Persoana::global_mutex.unlock();
 
     followers=new trie;
     following=new trie;
+
+
+    Persoana::global_mutex.unlock();
 }
 
 
