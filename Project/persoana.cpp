@@ -27,17 +27,23 @@ Persoana::Persoana(string nume)
 
     Persoana::no_pers++;
     exist[nume]=no_pers;
-    who[no_pers]=nume;
-    Persoana::give_back[no_pers]=this;
+
+    who[exist[nume]]=nume;
+
+    
+    Persoana::give_back[exist[nume]]=this;
+
+    
+    Persoana::global_mutex.unlock();
+
     name=nume;
-    indice=no_pers;
+    indice=exist[nume];
 
 
     followers=new trie;
     following=new trie;
 
 
-    Persoana::global_mutex.unlock();
 }
 
 
