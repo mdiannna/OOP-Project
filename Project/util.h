@@ -26,7 +26,6 @@ public:
 	string getDayAsString();
 	string getMonthAsString();
 	string getYearAsString();
-//TO DO
 	string getDateNowAsString();
 };
 
@@ -52,7 +51,6 @@ public:
 	string getHourAsString();
 	string getMinuteAsString();
 	string getSecondAsString();
-//TO DO
 	string getTimeNowAsString();	
 };
 

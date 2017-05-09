@@ -3,6 +3,8 @@
 
 void sandbox();
 
+//function for testing util.h classes and functions
+void test_util();
 
 #endif // SANDBOX_H_INCLUDED
 

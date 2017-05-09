@@ -22,7 +22,7 @@ void Date::setMonth(int month){
 }
 
 
-void Date::setYear(int){
+void Date::setYear(int year){
 	this->year = year;
 }
 
@@ -136,6 +136,8 @@ Date getDateNow(){
     result.setYear(now->tm_year + 1900);
     result.setMonth(now->tm_mon + 1);
     result.setDay(now->tm_mday);
+	
+	return result;
 }
 
 
@@ -164,6 +166,8 @@ Time getTimeNow(){
     result.setHour(now->tm_hour);
     result.setMinute(now->tm_min);
     result.setSecond(now->tm_sec);
+
+    return result;
 }
 
 
