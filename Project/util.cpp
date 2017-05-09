@@ -147,12 +147,18 @@ string getDateNowAsString(){
 }
 
 
-//TO DO: properly format date as string
 string convertDateToString(Date d){
 	string result = "";
-	result = result + to_string(d.getDay()) + "." 
-				+ to_string(d.getMonth()) + "." 
-				+ to_string(d.getYear());
+	string day = to_string(d.getDay());
+	string month = to_string(d.getMonth());
+	string year = to_string(d.getYear());
+
+	if(day.length() < 2)
+		day = "0" + day;
+	if(month.length() < 2)
+		month = "0" + month;
+
+	result = result + day + "." + month + "." + year;
 	return result;
 }
 
@@ -177,12 +183,18 @@ string getTimeNowAsString(){
 }
 
 
-//TO DO: properly format time as string
-string convertTimeToString(Time t){
-	string result = "";
-	result = result + to_string(t.getHour()) + ":" 
-				+ to_string(t.getMinute()) + ":" 
-				+ to_string(t.getSecond());
+	string hour = to_string(t.getHour());
+	string minute = to_string(t.getMinute());
+	string second = to_string(t.getSecond());
+
+	if(hour.length() < 2)
+		hour = "0" + hour;
+	if(minute.length() < 2)
+		minute = "0" + minute;
+	if(second.length() < 2)
+		second = "0" + second;
+
+	result = result + hour + ":" + minute + ":" + second;
 	return result;
 }
 /********************/

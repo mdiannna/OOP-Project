@@ -68,4 +68,5 @@ void test_util(){
     std::cout << date.getDateAsString() << "\n";
 
     std::cout << getDateNowAsString() << "\n";
+    std::cout << getTimeNowAsString() << "\n";
 }
