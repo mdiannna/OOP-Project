@@ -1,4 +1,4 @@
-#include "postari.h"
+#include "postare.h"
 
 
 void Postare::postManager(){

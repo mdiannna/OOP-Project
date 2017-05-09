@@ -12,12 +12,16 @@ class Postare{
     char * text;
     int text_len;
     int author_id;
-    enum privacyLevel{
+
+    Date post_date;
+    Time post_time;
+
+	enum privacyLevel{
         all, 
         friends, 
         followers
     };
-
+    
 
 public:
 	// methods:
