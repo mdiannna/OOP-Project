@@ -1,5 +1,5 @@
 #include "util.h"
-#include <string> 
+
 
 
 /************************/
@@ -40,7 +40,7 @@ int Date::getMonth(){
 	return this->month;
 }
 
-string Date::getYear(){
+int Date::getYear(){
 	return this->year;
 }
 
@@ -86,7 +86,7 @@ int Time::getHour(){
 int Time::getMinute(){
 	return this->minute;
 }
-string Time::getSecond(){
+int Time::getSecond(){
 	return this->second;
 }
 

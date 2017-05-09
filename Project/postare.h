@@ -2,6 +2,8 @@
 #define POSTARI_H_INCLUDED
 
 #include <iostream>
+#include "util.h"
+
 using namespace std;
 
 class Postare{
