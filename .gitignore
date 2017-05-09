@@ -34,7 +34,7 @@
 *.exe
 *.out
 *.app
-./*
+linuxBuild/
 
 ### CodeBlocks ###
 # specific to CodeBlocks IDE
