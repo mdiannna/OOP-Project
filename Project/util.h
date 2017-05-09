@@ -5,6 +5,9 @@
 using namespace std;
 
 
+/********************/
+//Class Date
+/********************/
 class Date{
 	int day;
 	int month;
@@ -28,6 +31,9 @@ public:
 };
 
 
+/********************/
+// Class Time
+/********************/
 
 class Time{
 	int hour;
@@ -49,5 +55,18 @@ public:
 //TO DO
 	string getTimeNowAsString();	
 };
+
+
+
+/********************/
+// non class member functions
+/********************/
+string convertDateToString(Date);
+Date getDateNow();
+string getDateNowAsString();
+string convertTimeToString(Time);
+Time getTimeNow();
+string getTimeNowAsString();
+
 
 #endif // UTIL_H_INCLUDED

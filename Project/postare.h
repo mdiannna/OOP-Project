@@ -2,6 +2,8 @@
 #define POSTARI_H_INCLUDED
 
 #include <iostream>
+#include <list>
+#include "persoana.h"
 #include "util.h"
 
 using namespace std;
@@ -24,11 +26,18 @@ class Postare{
         followers
     };
     
+    int nr_likes;
+    // list<Persoana> people_like;
+    list<int> people_like_ids;
+    //comments?
+    //shares?
 
 public:
 	// methods:
     void postManager();
+    void addLike();
 };
 
+// TO DO: operator << postare
 
 #endif // POSTARI_H_INCLUDED
