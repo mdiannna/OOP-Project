@@ -5,14 +5,22 @@
 using namespace std;
 
 class Postare{
+	// constants:
+    int TWEET_LIMIT = 140;
+
+    //variables:
     char * text;
-    //Persoana persoana;
-    enum nivelDeIntimitate{
-        toti,
-        prieteni,
-        followeri
+    int text_len;
+    int author_id;
+    enum privacyLevel{
+        all, 
+        friends, 
+        followers
     };
+
+
 public:
+	// methods:
     void postManager();
 };
 
