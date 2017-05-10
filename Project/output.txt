@@ -6,3 +6,4 @@ ali 20
 oameni urmariti care incep cu prefixul "al" 
 albert albert$ albu ali alex 
 
+
