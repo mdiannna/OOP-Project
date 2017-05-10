@@ -1,6 +1,0 @@
-#ifndef FRONTEND_H_INCLUDED
-#define FRONTEND_H_INCLUDED
-
-
-
-#endif // FRONTEND_H_INCLUDED
