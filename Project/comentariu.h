@@ -23,6 +23,7 @@ public:
     Comentariu(Persoana *pers, string _text);
 
     int getAuthorId();
+    string getAuthorName();
     int getNoLikes();
     string getText();
     Date getDate();
@@ -31,6 +32,9 @@ public:
 
     void setText(string _text);
     void add_like(Persoana *pers);
+
+    friend ostream& operator << (ostream &, Comentariu );
+
 };
 
 #endif // COMENTARIU_H_INCLUDED
