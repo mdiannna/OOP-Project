@@ -1,0 +1,9 @@
+top 10 ai lui ion
+alex 70
+albert 65
+ali 20
+
+oameni urmariti care incep cu prefixul "al" 
+albert albert$ albu ali alex 
+
+Hello4203776.0.0
