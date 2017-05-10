@@ -10,13 +10,6 @@ Postare::Postare(string text, int author_id){
 	}
 	catch(char const* error){
 		printError(error);
-		cout << "\n";
-  //   	cout << red << error << "\n";
-		// cout << green << error << "\n";
-		// cout << yellow << error << "\n";
-		// cout << blue << error << "\n";
-		// cout << magenta << error << "\n";
-		// cout << cyan << error << "\n";
 		return;
 	}
 
@@ -24,9 +17,9 @@ Postare::Postare(string text, int author_id){
 	this->text_len = text.length();
 	this->author_id = author_id;
 	
-	cout << "postarE:" << this->text;
-
-
+	
+	printSuccess("Postare creata cu succes");
+	cout << "postarE:" << this->text << "\n";
 }
 
 void Postare::postManager(){
