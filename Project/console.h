@@ -17,4 +17,14 @@ void printError(string);
 void printWarning(string);
 void printSuccess(string);
 
+
+//TO DO? Make template
+void printRed(int);
+void printYellow(int);
+void printGreen(int);
+void printBlue(int);
+void printMagenta(int);
+void printCyan(int);
+
+
 #endif

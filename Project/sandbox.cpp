@@ -93,10 +93,11 @@ void testPostare(){
     Postare postare1(test, 2);
     cout << postare1;
     
-    for(int i=0; i<150; i++)
-        test = test + "X";
-    // genereaza eroare
-    Postare *postare2 = new Postare(test, 2);
-    cout << *postare2;
+//     for(int i=0; i<150; i++)
+//         test = test + "X";
+//     // genereaza eroare
+//     Postare *postare2 = new Postare(test, 2);
+//     cout << *postare2;
+// 
 }
 

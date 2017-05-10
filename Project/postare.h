@@ -43,24 +43,24 @@ public:
     void addLike();
 
 /*** GET functions ***/    
-    int getTweetLimit();
-    int getText();
-    int getLength();
-    int getAuthorId();
+    int getTweetLimit() const;
+    string getText() const;
+    int getTextLength() const;
+    int getAuthorId() const;
     // persoana getAuthor();
-    Date getPostDate();
-    string getPostDateAsString();
-    Time getPostTime();
-    string getPostTimeAsString();
+    Date getPostDate() const;
+    string getPostDateAsString() const;
+    Time getPostTime() const;
+    string getPostTimeAsString() const;
     //TO DO: privacy level??
-    int getNrLikes();
+    int getNrLikes() const;
     // TO DO:
-    list<int> getPeopleLikeIDs();
+    list<int> getPeopleLikeIDs() const;
 
 /*** SET functions ***/
     //implicit set length
     void setText(string);
-    void setAuthorId();
+    void setAuthorId(int author_id);
     //???:
     // void setAuthor(Persoana);
     void setPostDate(Date);

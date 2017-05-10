@@ -58,3 +58,50 @@ void printWarning(string warning){
 void printSuccess(string success){
 	printGreen("---SUCCESS--- " + success + "\n");
 }	
+
+
+
+
+
+
+// TO DO? Make template?
+
+void printRed(int message){
+	cout << red << message;	
+	cout << white;
+}
+
+
+void printGreen(int message){
+	cout << green << message;	
+	cout << white;
+}
+
+
+void printYellow(int message){
+	cout << yellow << message;	
+	cout << white;
+}
+
+
+void printBlue(int message){
+	cout << blue << message;	
+	cout << white;
+}
+
+
+void printMagenta(int message){
+	cout << magenta << message;	
+	cout << white;
+}
+
+
+void printCyan(int message){
+	cout << cyan << message;	
+	cout << white;
+}
+
+
+void printWhite(int message){
+	cout << white << message;	
+}
