@@ -8,9 +8,9 @@ using namespace std;
 
 int main()
 {
-    // sandbox();
-    test_util();
-    testPostare();
+    sandbox();
+//    test_util();
+   // testPostare();
 
     cout << "\n";
     
