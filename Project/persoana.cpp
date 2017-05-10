@@ -16,6 +16,16 @@ map<int, Persoana*> Persoana:: give_back;
 mutex Persoana:: global_mutex;
 
 
+Persoana* Persoana::getPersoanaByNo(int no)
+{
+    return give_back[no];
+}
+
+Persoana* Persoana::getPersoanaByString(string x)
+{
+    return give_back[exist[x]];
+}
+
 
 Persoana::Persoana(string nume)
 {
@@ -256,5 +266,3 @@ void Persoana::read_chatting(char *v)
     sec.clear();
     mn.clear();
 }
-
-
