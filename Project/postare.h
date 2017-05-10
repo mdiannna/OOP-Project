@@ -1,10 +1,11 @@
-#ifndef POSTARI_H_INCLUDED
-#define POSTARI_H_INCLUDED
+#ifndef POSTARE_H_INCLUDED
+#define POSTARE_H_INCLUDED
 
 #include <iostream>
 #include <list>
 #include "persoana.h"
 #include "util.h"
+#include "console.h"
 
 using namespace std;
 

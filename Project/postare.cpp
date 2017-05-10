@@ -1,21 +1,22 @@
 #include "postare.h"
-#include "colors.h"
 
 // Constructor
 Postare::Postare(string text, int author_id){
 	try{
 		if(text.length() > this->TWEET_LIMIT)
-			throw "!Eroare. Postarea nu a fost creata - depaseste lungimea de 140 caractere.";
+			throw "Postarea nu a fost creata - depaseste lungimea de 140 caractere.";
 		else
 			this->text_len = text.length();	
 	}
 	catch(char const* error){
-    	cout << red << error << "\n";
-		cout << green << error << "\n";
-		cout << yellow << error << "\n";
-		cout << blue << error << "\n";
-		cout << magenta << error << "\n";
-		cout << cyan << error << "\n";
+		printError(error);
+		cout << "\n";
+  //   	cout << red << error << "\n";
+		// cout << green << error << "\n";
+		// cout << yellow << error << "\n";
+		// cout << blue << error << "\n";
+		// cout << magenta << error << "\n";
+		// cout << cyan << error << "\n";
 		return;
 	}
 

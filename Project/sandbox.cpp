@@ -79,6 +79,14 @@ void test_util(){
 }
 
 
+
+void testConsole(){
+    printError("This is an error");
+    printWarning("This is a warning");
+    printSuccess("Success message");
+}
+
+
 void testPostare(){
     string test = "lalala";
 
