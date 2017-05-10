@@ -2,7 +2,9 @@
 #include "sandbox.h"
 #include "persoana.h"
 #include "util.h"
+#include "postare.h"
 #include "sugestii.h"
+
 #include <cstdio>
 #include <iostream>
 #include <bits/stdc++.h>
@@ -19,12 +21,12 @@ void sandbox()
     Persoana *ali=new Persoana("ali");
     Persoana *alex=new Persoana("alex");
 
-    /*
-    for(auto it: Persoana::exist)
-    {
-        cout<< it.first << " " << it.second <<"\n";
-    }
-    */
+    
+    // for(auto it: Persoana::exist)
+    // {
+    //     cout<< it.first << " " << it.second <<"\n";
+    // }
+    
 
     ion->follow(albert);
     ion->follow(albert2);
@@ -52,7 +54,6 @@ void sandbox()
 }
 
 
-/*
 void test_util(){
     Date date;
 
@@ -76,4 +77,15 @@ void test_util(){
     std::cout << getDateNowAsString() << "\n";
     std::cout << getTimeNowAsString() << "\n";
 }
-*/
+
+
+void testPostare(){
+    string test = "lalala";
+
+    for(int i=0; i<150; i++)
+        test = test + "X";
+
+    Postare *postare = new Postare(test, 2);
+
+}
+
