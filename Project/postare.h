@@ -28,9 +28,12 @@ class Postare{
     };
     
     int nr_likes;
+    // TO DO:
     list<int> people_like_ids;
     // list of comments to post
     // list<Comments> comments_to_post; 
+
+    friend ostream &operator<<(ostream &, const Postare&);
     
 
 public:
@@ -38,6 +41,36 @@ public:
 	Postare(string, int);
     void postManager();
     void addLike();
+
+/*** GET functions ***/    
+    int getTweetLimit();
+    int getText();
+    int getLength();
+    int getAuthorId();
+    // persoana getAuthor();
+    Date getPostDate();
+    string getPostDateAsString();
+    Time getPostTime();
+    string getPostTimeAsString();
+    //TO DO: privacy level??
+    int getNrLikes();
+    // TO DO:
+    list<int> getPeopleLikeIDs();
+
+/*** SET functions ***/
+    //implicit set length
+    void setText(string);
+    void setAuthorId();
+    //???:
+    // void setAuthor(Persoana);
+    void setPostDate(Date);
+    void setPostTime(Time);
+    //TO DO: privacy level??
+    void setNrLikes(int);
+    // TO DO:
+    // void addPeopleLikeID(int);
+    // void addPeopleLike(Person);
+
 };
 
 // TO DO: operator << postare

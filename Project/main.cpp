@@ -8,7 +8,10 @@ using namespace std;
 
 int main()
 {
-    
+    // sandbox();
+	// test_util();
+	testConsole();
+ 	testPostare();
 
     cout << "\n";
     

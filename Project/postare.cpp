@@ -1,5 +1,6 @@
 #include "postare.h"
 
+
 // Constructor
 Postare::Postare(string text, int author_id){
 	try{
@@ -16,10 +17,11 @@ Postare::Postare(string text, int author_id){
 	this->text = text;
 	this->text_len = text.length();
 	this->author_id = author_id;
-	
+	this->post_date = getDateNow();
+	this->post_time = getTimeNow();
+
 	
 	printSuccess("Postare creata cu succes");
-	cout << "postarE:" << this->text << "\n";
 }
 
 void Postare::postManager(){
@@ -28,4 +30,17 @@ void Postare::postManager(){
 
 void Postare::addLike(){
 	this->nr_likes++;
+}
+
+
+ostream &operator<<(ostream &out, const Postare& post){
+	out << post.getAuthorId()<< " ";
+	out << post.getDateAsString() << " ";
+	out << post.getTimeAsString() << " ";
+	out << "\n";
+	out << post.getText();
+	out << "\n";
+	out << post.getNrLikes();
+	
+
 }
