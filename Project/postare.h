@@ -10,10 +10,10 @@ using namespace std;
 
 class Postare{
 	// constants:
-    int TWEET_LIMIT = 140;
+    const int TWEET_LIMIT = 140;
 
     //variables:
-    char * text;
+    string text;
     int text_len;
     int author_id;
 
@@ -27,13 +27,14 @@ class Postare{
     };
     
     int nr_likes;
-    // list<Persoana> people_like;
     list<int> people_like_ids;
-    //comments?
-    //shares?
+    // list of comments to post
+    // list<Comments> comments_to_post; 
+    
 
 public:
 	// methods:
+	Postare(string, int);
     void postManager();
     void addLike();
 };

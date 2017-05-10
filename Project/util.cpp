@@ -147,6 +147,7 @@ string getDateNowAsString(){
 }
 
 
+//TO DO: properly format date as string
 string convertDateToString(Date d){
 	string result = "";
 	string day = to_string(d.getDay());
@@ -183,6 +184,8 @@ string getTimeNowAsString(){
 }
 
 
+string convertTimeToString(Time t){
+	string result = "";
 	string hour = to_string(t.getHour());
 	string minute = to_string(t.getMinute());
 	string second = to_string(t.getSecond());

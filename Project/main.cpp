@@ -10,6 +10,9 @@ int main()
 {
     // sandbox();
     test_util();
+    testPostare();
+
+    cout << "\n";
     
     return 0;
 }
