@@ -73,6 +73,5 @@ public:
 
 };
 
-// TO DO: operator << postare
 
 #endif // POSTARI_H_INCLUDED

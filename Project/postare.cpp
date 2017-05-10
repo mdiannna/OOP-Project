@@ -42,5 +42,5 @@ ostream &operator<<(ostream &out, const Postare& post){
 	out << "\n";
 	out << post.getNrLikes();
 	
-
+	return out;
 }
