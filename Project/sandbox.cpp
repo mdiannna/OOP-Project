@@ -2,8 +2,12 @@
 #include "sandbox.h"
 #include "persoana.h"
 #include "util.h"
-
+#include "sugestii.h"
+#include <cstdio>
 #include <iostream>
+#include <bits/stdc++.h>
+
+using namespace std;
 
 void sandbox()
 {
@@ -27,6 +31,8 @@ void sandbox()
     ion->follow(albu);
     ion->follow(ali);
     ion->follow(alex);
+    albert->follow(albu);
+    albert->follow(alex);
 
     chat(ion, alex, 60);
     chat(ion, alex, 10);
@@ -46,27 +52,28 @@ void sandbox()
 }
 
 
-
+/*
 void test_util(){
     Date date;
-    
+
     date.setDay(1);
     date.setMonth(2);
     date.setYear(2014);
 
-    std::cout << "day:" << date.getDay() << "\n";   
-    std::cout << "month:" << date.getMonth() << "\n";   
-    std::cout << "year:" << date.getYear() << "\n";   
+    std::cout << "day:" << date.getDay() << "\n";
+    std::cout << "month:" << date.getMonth() << "\n";
+    std::cout << "year:" << date.getYear() << "\n";
 
 
     date.setDate(2, 4, 2013);
 
-    std::cout << "day:" << date.getDay() << "\n";   
-    std::cout << "month:" << date.getMonth() << "\n";   
-    std::cout << "year:" << date.getYear() << "\n";   
-    
+    std::cout << "day:" << date.getDay() << "\n";
+    std::cout << "month:" << date.getMonth() << "\n";
+    std::cout << "year:" << date.getYear() << "\n";
+
     std::cout << date.getDateAsString() << "\n";
 
     std::cout << getDateNowAsString() << "\n";
     std::cout << getTimeNowAsString() << "\n";
 }
+*/
