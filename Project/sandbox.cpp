@@ -67,9 +67,9 @@ void test_comentarii()
     comm2->setText("vdvdvdg");
     cout << comm->getNoLikes() << '\n';
     cout << comm2->getAuthorId() << '\n';
-    cout << comm->getAuthorName() << '\n';
-    //cout << comm->getDate() << '\n';
-    //cout << comm2->getTime() << '\n';
+   // cout << comm->getAuthorName() << '\n';
+    cout << comm->getDate() << '\n';
+    cout << comm2->getTime() << '\n';
     cout << comm2->getText() << '\n';
 }
 

@@ -16,6 +16,14 @@ map<int, Persoana*> Persoana:: give_back;
 mutex Persoana:: global_mutex;
 
 
+
+// TO DO function:
+// Persoana* getPersoanaByNo(int no)
+// {
+//     return give_back[no];
+// }
+
+
 Persoana* Persoana::getPersoanaByNo(int no)
 {
     return give_back[no];
@@ -25,6 +33,7 @@ Persoana* Persoana::getPersoanaByString(string x)
 {
     return give_back[exist[x]];
 }
+
 
 
 Persoana::Persoana(string nume)

@@ -27,37 +27,37 @@ void Date::setYear(int year){
 }
 
 
-string Date::getDateAsString(){
+string Date::getDateAsString() const{
 	return convertDateToString(*this);
 }
 
 
-int Date::getDay(){
+int Date::getDay() const{
 	return this->day;
 }
 
 
-int Date::getMonth(){
+int Date::getMonth() const{
 	return this->month;
 }
 
 
-int Date::getYear(){
+int Date::getYear() const{
 	return this->year;
 }
 
 
-string Date::getDayAsString(){
+string Date::getDayAsString() const{
 	return to_string(this->day);
 }
 
 
-string Date::getMonthAsString(){
+string Date::getMonthAsString() const{
 	return to_string(this->month);
 }
 
 
-string Date::getYearAsString(){
+string Date::getYearAsString() const{
 	return to_string(this->year);
 }
 
@@ -88,37 +88,37 @@ void Time::setSecond(int second){
 }
 
 
-int Time::getHour(){
+int Time::getHour() const{
 	return this->hour;
 }
 
 
-int Time::getMinute(){
+int Time::getMinute() const{
 	return this->minute;
 }
 
 
-int Time::getSecond(){
+int Time::getSecond() const{
 	return this->second;
 }
 
 
-string Time::getTimeAsString(){
+string Time::getTimeAsString() const{
 	return convertTimeToString(*this);
 }
 
 
-string Time::getHourAsString(){
+string Time::getHourAsString() const{
 	return to_string(this->hour);
 }
 
 
-string Time::getMinuteAsString(){
+string Time::getMinuteAsString() const{
 	return to_string(this->minute);
 }
 
 
-string Time::getSecondAsString(){
+string Time::getSecondAsString() const{
 	return to_string(this->second);
 }
 
@@ -201,3 +201,18 @@ string convertTimeToString(Time t){
 	return result;
 }
 /********************/
+
+
+/********************/
+//Operators overloading
+/********************/
+ostream& operator<<(ostream & out, const Date& date){
+	out << date.getDateAsString();
+	return out;
+}
+
+
+ostream& operator<<(ostream &out, const Time& time){
+	out << time.getTimeAsString();
+	return out;
+}

@@ -15,6 +15,6 @@ int main()
  //	testPostare();
 
     cout << "\n";
-    test_comentarii();
+   test_comentarii();
     return 0;
 }
