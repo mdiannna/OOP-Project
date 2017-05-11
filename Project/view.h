@@ -26,7 +26,7 @@ public:
 	//same for each view
 	void render_footer() const;
 
-	
+
 	friend ostream& operator<<(ostream&, const View&);
 };
 
@@ -37,12 +37,12 @@ public:
 class PostView : public View{
 	int post_id;
 public:
-	PostView(int post_id, string title) : View(title){ 
+	PostView(int post_id, string title) : View(title){
 		this->post_id = post_id;
 	}
 	PostView() : View("Post view"){}
 
-	void render_content() const;	
+	void render_content() const;
 };
 
 
@@ -54,8 +54,29 @@ public:
 	AllPostsView(string title) : View(title){}
 	AllPostsView() : View("All Posts View"){}
 
-	void render_content() const;	
+	void render_content() const;
 };
 
-	
+class CommentView: public View
+{
+    int comment_id;
+public:
+    CommentView(int comm_id, string title): View(title)
+    {
+        comment_id = comm_id;
+    }
+    CommentView(): View("Comment View"){}
+
+    void render_content() const;
+};
+
+class AllCommentsView: public View
+{
+public:
+    AllCommentsView(string title): View(title){}
+    AllCommentsView(): View("All Comments View: "){}
+
+    void render_content() const;
+};
+
 #endif

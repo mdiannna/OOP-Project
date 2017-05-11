@@ -73,10 +73,10 @@ void test_comentarii()
     cout << comm->getDate() << '\n';
     cout << comm2->getTime() << '\n';
     cout << comm2->getText() << '\n';
-    
+
 
     Comentariu comm3(ion, 2, "fsfns");
-    
+
 }
 
 void test_util(){
@@ -169,6 +169,7 @@ void test_sugestii()
 
 
 void testView(){
+
     View * view1 = new View("Test View");
     cout << *view1;
 

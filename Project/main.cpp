@@ -3,6 +3,7 @@
 #include "postare.h"
 #include "util.h"
 #include "sandbox.h"
+#include "view.h"
 
 using namespace std;
 
@@ -21,6 +22,6 @@ int main()
     //test_sugestii();
 
     testView();
-    
+
     return 0;
 }

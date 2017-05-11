@@ -66,4 +66,13 @@ void AllPostsView::render_content()  const{
 	printAllPosts();
 }
 
+void CommentView::render_content() const
+{
+    Comment *comm = getComentariuById(comment_id);
+    cout << *comm;
+}
 
+ void AllCommentsView::render_content() const
+ {
+
+ }
