@@ -153,8 +153,7 @@ void test_sugestii()
     chat(ali, albert, 100);
 
     Sugestie sugestie1(ion);
-    sugestie1.afiseaza_sugestie();
-    sugestie1.afiseaza_toate_sugestiile();
 
-
+    //sugestie1.afiseaza_sugestie();
+    //sugestie1.afiseaza_toate_sugestiile();
 }
