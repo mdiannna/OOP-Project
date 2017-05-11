@@ -126,7 +126,6 @@ void testPostare(){
         test = test + "X";
     // genereaza eroare
     Postare postare3 = creeazaPostare(test, 2);
-//     cout << postare3;
 
 
     Postare postare4 = creeazaPostare("uuuuuuuuu", 7);
