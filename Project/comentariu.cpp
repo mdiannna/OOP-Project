@@ -8,6 +8,7 @@
 #include "node.h"
 #include "util.h"
 #include "console.h"
+#include "postare.h"
 #include "colors.h"
 
 using namespace std;
@@ -26,8 +27,8 @@ Comentariu::Comentariu(Persoana *pers, int id_postare, string _text)
     last_id++;
     id = last_id + 1;
     //comentarii.push_back(*this);
-    //Postare* post = getPostareById(id_postare);
-    //post->addComment(id);
+    Postare* post = getPostareById(id_postare);
+    post->addComment(id);
 }
 
 int Comentariu::getId() const
