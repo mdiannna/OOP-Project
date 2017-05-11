@@ -29,7 +29,6 @@ Sugestie::Sugestie(Persoana *pers)
     it2 = f1.begin();
     while(it2 != f1.end())
     {
-        cout<<*it<<"  "<<*it2<<'\n';
         if(*it < *it2)
         {
              it++;
