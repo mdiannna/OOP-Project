@@ -63,7 +63,6 @@ void PostView::render_content()  const{
 //AllPostsView
 /**********************************/
 void AllPostsView::render_content()  const{
-	// printYellow("Content from AllPostsView be here\n");
 	printAllPosts();
 }
 

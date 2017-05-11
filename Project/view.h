@@ -48,7 +48,7 @@ public:
 
 
 /**********************************/
-//class PostView
+//class AllPostsView
 /**********************************/
 class AllPostsView : public View{
 public:
