@@ -5,6 +5,7 @@
 #include "postare.h"
 #include "sugestii.h"
 #include "comentariu.h"
+#include "view.h"
 
 #include <cstdio>
 #include <iostream>
@@ -164,4 +165,17 @@ void test_sugestii()
 
     //sugestie1.afiseaza_sugestie();
     //sugestie1.afiseaza_toate_sugestiile();
+}
+
+
+void testView(){
+    View * view1 = new View("Test View");
+    cout << *view1;
+
+    View * view2 = new PostView(1, "Customized Post View");
+    cout << *view2;
+
+
+    AllPostsView view3("AllPostsView");
+    cout << view3;
 }

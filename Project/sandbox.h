@@ -15,5 +15,7 @@ void testPostare();
 void test_comentarii();
 //function for testing sugestii
 void test_sugestii();
+// function for testing view library
+void testView();
 #endif // SANDBOX_H_INCLUDED
 

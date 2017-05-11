@@ -19,5 +19,8 @@ int main()
 
     printAllPosts();
     //test_sugestii();
+
+    testView();
+    
     return 0;
 }
