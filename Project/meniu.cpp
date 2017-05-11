@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
 #include <stdlib.h>
-#include <conio.h>
+// #include <conio.h>
 
 #include "persoana.h"
 #include "postare.h"
@@ -42,18 +42,11 @@ void meniu()
 
     do
     {
-        printBlue("Console Tweet 2017 Menu\n");
-        printBlue("=======================\n");
-        printWhite("1. \n");
-        printWhite("2. \n");
-        printWhite("3. \n");
-        printWhite("4. Adauga comentariu\n");
-        printWhite("5. Apreciaza un comentariu\n");
-        printWhite("6. Afiseaza persoane sugerate pentru a fi urmarite\n");
-        printWhite("7. Afiseaza o persoana sugerata pentru a fi urmarita\n");
-        printWhite("8. Exit\n");
-        printBlue("=======================\n");
-        printBlue("Enter your selection:\n");
+        View * meniu = new MenuView();
+        cout << *meniu;
+
+        delete(meniu);
+
         cin >> choice;
         cout << '\n';
         switch(choice)
