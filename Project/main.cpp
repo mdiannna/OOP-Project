@@ -9,7 +9,7 @@ using namespace std;
 int main()
 {
 
-    //sandbox();
+    sandbox();
 	test_util();
 	testConsole();
  	testPostare();

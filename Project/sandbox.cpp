@@ -14,7 +14,7 @@ using namespace std;
 
 void sandbox()
 {
-    freopen("output.txt","w",stdout);
+//    freopen("output.txt","w",stdout);
     Persoana *albert=new Persoana("albert");
     Persoana *ion=new Persoana("ion");
     Persoana *albert2=new Persoana("albert");

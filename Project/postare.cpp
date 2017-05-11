@@ -133,8 +133,8 @@ void Postare::setNrLikes(int nr_likes){
 
 ostream &operator<<(ostream &out, const Postare& post){
 	out << "--------------POSTARE----" << post.getID() << "--------\n";
-	printBlue("@author");
-	printBlue(post.getAuthorId());
+	printBlue("@");
+	printBlue(getPersoanaNameById(post.getAuthorId()));
 	out << "          ";
 	printYellow(post.getPostDateAsString());
 	out << " ";
