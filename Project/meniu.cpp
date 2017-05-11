@@ -1,6 +1,5 @@
 #include <bits/stdc++.h>
 #include <stdlib.h>
-#include <conio.h>
 
 #include "persoana.h"
 #include "postare.h"
@@ -14,25 +13,75 @@ using namespace std;
 
 void adauga_comentariu()
 {
-    system("reset");
+    system("reset"); //system("cls");
+
+    cout << "Introduceti numele persoanei care adauga comentariul: ";
+    string nume;
+    cin >> nume;
+
+    Persoana *p = getPersoanaByString(nume);
+    cout << "\nIntrodueti id ul postarii la care se adauga comentariul: ";
+
+    int id;
+    cin >> id;
+    cout << "\nIntroduceti comentariul:\n";
+
+    string text;
+    cin >> text;
+
+    Comentariu *c = new Comentariu(p, id, text);
+    Postare *post = getPostareById(id);
+    post->addComment(c->getId());
 }
 
 
 void apreciaza_comentariu()
 {
+    system("reset"); //system("cls");
 
+    cout << "Introduceti numele persoanei care apreciaza comentariul: ";
+    string nume;
+    cin >> nume;
+    Persoana *p = getPersoanaByString(nume);
+
+    cout << "\nIntroduceti id ul  postarii: ";
+    int id;
+    cin >> id;
+
+    Postare *pp = getPostareById(id);
+    pp->printComments();
+
+    cout << "\nIntroduceti id ul comentariului: ";
+    cin >> id;
+
+    Comentariu *c = getComentariuById(id);
+    c->add_like(p);
 }
 
 
 void afiseaza_sugestii()
 {
+    system("reset"); //system("cls");
 
+    cout << "Introduceti numele persoanei pentru care sa se afiseze sugestii: ";
+    string nume;
+    cin >> nume;
+    Persoana *p = getPersoanaByString(nume);
+    Sugestie *s = new Sugestie(p);
+    s->afiseaza_toate_sugestiile();
 }
 
 
 void afiseaza_sugestie()
 {
+     system("reset"); //system("cls");
 
+    cout << "Introduceti numele persoanei pentru care sa se afiseze o sugestie: ";
+    string nume;
+    cin >> nume;
+    Persoana *p = getPersoanaByString(nume);
+    Sugestie *s = new Sugestie(p);
+    s->afiseaza_sugestie();
 }
 
 
