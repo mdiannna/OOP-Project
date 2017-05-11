@@ -43,7 +43,6 @@ public:
 	PostView() : View("Post view"){}
 
 	void render_content() const;	
-	friend ostream& operator<<(ostream&, const PostView&);
 };
 
 
@@ -56,7 +55,6 @@ public:
 	AllPostsView() : View("All Posts View"){}
 
 	void render_content() const;	
-	friend ostream& operator<<(ostream&, const PostView&);
 };
 
 	
