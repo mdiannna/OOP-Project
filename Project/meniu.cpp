@@ -86,6 +86,20 @@ void afiseaza_sugestie()
 }
 
 
+
+void creeazaPostare(){
+
+}
+
+
+void afiseazaToatePostarile(){
+    printAllPosts();
+}
+
+void afiseazaPostareCuId(){
+
+}
+
 void meniu()
 {
     int choice = 0;
@@ -99,21 +113,29 @@ void meniu()
 
         cin >> choice;
         cout << '\n';
+        // system("clear");
+
         switch(choice)
         {
         case 1:
+            creeazaPostare();
+            break;
         case 2:
+            afiseazaToatePostarile();
+            break;
         case 3:
+            afiseazaPostareCuId();
+            break;
         case 4:
-            void adauga_comentariu();
+            adauga_comentariu();
             break;
         case 5:
-            void apreciaza_comentariu();
+            apreciaza_comentariu();
             break;
         case 6:
-            void afiseaza_sugestii();
+            afiseaza_sugestii();
         case 7:
-            void afiseaza_sugestie();
+            afiseaza_sugestie();
             break;
         case 8:
 
