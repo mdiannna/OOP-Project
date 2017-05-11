@@ -57,6 +57,9 @@ public:
 	void render_content() const;
 };
 
+
+
+
 class CommentView: public View
 {
     int comment_id;
@@ -70,6 +73,7 @@ public:
     void render_content() const;
 };
 
+
 class AllCommentsView: public View
 {
 public:
@@ -78,5 +82,19 @@ public:
 
     void render_content() const;
 };
+
+
+
+/**********************************/
+//class MenuView
+/**********************************/
+class MenuView : public View{
+public:
+	MenuView(string title) : View(title){}
+	MenuView() : View("Console Tweet 2017 Menu"){}
+	void render_content() const;
+};
+
+
 
 #endif

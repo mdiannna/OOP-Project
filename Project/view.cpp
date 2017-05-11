@@ -20,10 +20,9 @@ string View::getTitle()  const{
 
 void View::render_header() const{
 	cout << "\n";
-	printBlue("------------------------------\n");
+	printBlue("================================\n");
 	cout << this->getTitle() << "\n";
-	// cout << this->title << "\n";
-	printBlue("------------------------------\n");
+	printBlue("================================\n");
 
 }
 
@@ -77,3 +76,20 @@ void CommentView::render_content() const
  {
 
  }
+
+
+ void MenuView::render_content() const{
+        printWhite("1. \n");
+        printWhite("2. \n");
+        printWhite("3. \n");
+        printWhite("4. Adauga comentariu\n");
+        printWhite("5. Apreciaza un comentariu\n");
+        printWhite("6. Afiseaza persoane sugerate pentru a fi urmarite\n");
+        printWhite("7. Afiseaza o persoana sugerata pentru a fi urmarita\n");
+        printWhite("8. Exit\n");
+        printBlue("=======================\n");
+        printBlue("Enter your selection:\n");
+ }
+
+
+
