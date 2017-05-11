@@ -8,11 +8,14 @@ using namespace std;
 
 int main()
 {
+
     sandbox();
-    test_util();
+	test_util();
 	testConsole();
  	testPostare();
-    test_comentarii();
-    //test_sugestii();
+
+    cout << "\n";
+   	test_comentarii();
+
     return 0;
 }

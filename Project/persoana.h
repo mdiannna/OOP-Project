@@ -52,5 +52,10 @@ class Persoana
 };
 //map<string, int> Persoana::exist;
 
+// Non class member functions
+Persoana * getPersoanaById(int);
+string getPersoanaNameById(int);
+
+
 
 #endif // PERSOANA_H_INCLUDED
