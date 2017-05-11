@@ -15,6 +15,11 @@ using namespace std;
 
 int Comentariu::last_id = 0;
 
+Comentariu::Comentariu()
+{
+
+}
+
 Comentariu::Comentariu(Persoana *pers, int id_postare, string _text)
 {
     string nume = pers->name;

@@ -27,7 +27,7 @@ class Comentariu
     list<int> people_like_ids;
 
 public:
-    Comentariu(){};
+    Comentariu();
     Comentariu(Persoana *pers, int id_postare, string _text);
 
     int getId() const;

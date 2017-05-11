@@ -1,6 +1,7 @@
 #include "view.h"
 #include "console.h"
 #include "postare.h"
+#include "comentariu.h"
 
 View::View(string title){
 	this->title = title;
@@ -68,7 +69,7 @@ void AllPostsView::render_content()  const{
 
 void CommentView::render_content() const
 {
-    Comment *comm = getComentariuById(comment_id);
+    Comentariu *comm = getComentariuById(comment_id);
     cout << *comm;
 }
 

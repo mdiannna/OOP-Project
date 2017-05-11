@@ -4,6 +4,7 @@
 #include "util.h"
 #include "sandbox.h"
 #include "view.h"
+#include "meniu.h"
 
 using namespace std;
 
@@ -21,7 +22,7 @@ int main()
     printAllPosts();
     //test_sugestii();
 
-    testView();
-
+    //testView();
+    meniu();
     return 0;
 }
