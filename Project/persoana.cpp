@@ -17,11 +17,19 @@ mutex Persoana:: global_mutex;
 
 
 
-// TO DO function:
-// Persoana* getPersoanaByNo(int no)
-// {
-//     return give_back[no];
-// }
+Persoana* getPersoanaById(int id)
+{
+    Persoana *pers = pers->give_back[id];
+    return pers;
+}
+
+string getPersoanaNameById(int id)
+{
+    Persoana *pers = pers->give_back[id];
+    string nume = pers->who[pers->indice];
+    return nume;
+}
+
 
 
 Persoana* Persoana::getPersoanaByNo(int no)
