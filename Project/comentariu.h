@@ -18,11 +18,16 @@ class Comentariu
     int author_id;
     int post_id;
     string text;
+
     Date date;
     Time time;
+
     int no_likes;
+
     list<int> people_like_ids;
+
 public:
+    Comentariu(){};
     Comentariu(Persoana *pers, int id_postare, string _text);
 
     int getId() const;
@@ -42,5 +47,17 @@ public:
 
 };
 
+static map<int, Comentariu *>comentarii;
+
+
+Comentariu * getComentariuById(int) ;
+
+
+static Comentariu creeazaComentariu(Persoana *pers, int post_id, string text)
+{
+    Comentariu *comm = new Comentariu(pers, post_id, text);
+    comentarii.insert({comm->getId(), comm});
+    return *comm;
+}
 #endif // COMENTARIU_H_INCLUDED
 

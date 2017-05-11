@@ -24,11 +24,18 @@ Comentariu::Comentariu(Persoana *pers, int id_postare, string _text)
     date = getDateNow();
     time = getTimeNow();
     no_likes = 0;
+
     last_id++;
     id = last_id + 1;
-    //comentarii.push_back(*this);
+
+    comentarii.insert({id, this});
+
     Postare* post = getPostareById(id_postare);
-    cout << "Add comment to post" << id_postare << "\n";
+
+    printSuccess("Comentariu adaugat la postarea ");
+    printSuccess(id_postare);
+    cout << "\n";
+
     post->addComment(id);
 }
 
@@ -117,4 +124,9 @@ ostream &operator <<(ostream & out, const Comentariu &comm)
     out << "\n---------------------------------\n";
 
     return out;
+}
+
+Comentariu * getComentariuById(int id_cautat)
+{
+    return comentarii[id_cautat];
 }
