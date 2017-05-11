@@ -25,7 +25,7 @@ Comentariu::Comentariu(Persoana *pers, int id_postare, string _text)
     no_likes = 0;
     last_id++;
     id = last_id + 1;
-    comentarii.push_back(*this);
+    //comentarii.push_back(*this);
     //Postare* post = getPostareById(id_postare);
     //post->addComment(id);
 }

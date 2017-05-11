@@ -25,9 +25,14 @@ Sugestie::Sugestie(Persoana *pers)
             f1.insert(*it2);
         }
     }
+    set<int> ::iterator it2;
     for(it = f1.begin(); it != f1.end(); it++)
-        if(f.find(*it))sugestii.push_back(*it);
-
+    {
+        int ok = 1;
+        for(it2 = f.begin(); it2 != f.end() && ok; it++)
+            if(*it == *it2)ok = 0;
+        if(ok)sugestii.push_back(*it);
+    }
 }
 
 void Sugestie::afiseaza_toate_sugestiile()
