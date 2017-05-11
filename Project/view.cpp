@@ -1,6 +1,6 @@
 #include "view.h"
 #include "console.h"
-
+#include "postare.h"
 
 View::View(string title){
 	this->title = title;
@@ -34,7 +34,7 @@ void View::render_content()  const{
 
 
 void View::render_footer()  const{
-	cout << "\n";
+	// cout << "\n";
 	printBlue("_________________________________\n");
 	printBlue("Copyright Console Tweet 2017");
 	cout << "\n\n\n";
@@ -54,9 +54,8 @@ ostream & operator<<(ostream& out, const View& view){
 //PostView
 /**********************************/
 void PostView::render_content()  const{
-	printYellow("Content from PostView for Post ");
-	printMagenta(this->post_id);
-	printYellow(" will be here\n");
+	Postare * p = getPostareById(this->post_id);
+	cout << *p;
 }
 
 
@@ -64,7 +63,8 @@ void PostView::render_content()  const{
 //AllPostsView
 /**********************************/
 void AllPostsView::render_content()  const{
-	printYellow("Content from AllPostsView be here\n");
+	// printYellow("Content from AllPostsView be here\n");
+	printAllPosts();
 }
 
 
