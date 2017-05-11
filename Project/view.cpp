@@ -79,9 +79,9 @@ void CommentView::render_content() const
 
 
  void MenuView::render_content() const{
-        printWhite("1. \n");
-        printWhite("2. \n");
-        printWhite("3. \n");
+        printWhite("1. Creeaza postare\n");
+        printWhite("2. Afiseaza toate postarile\n");
+        printWhite("3. Afiseaza postare cu id\n");
         printWhite("4. Adauga comentariu\n");
         printWhite("5. Apreciaza un comentariu\n");
         printWhite("6. Afiseaza persoane sugerate pentru a fi urmarite\n");

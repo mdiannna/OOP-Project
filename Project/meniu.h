@@ -17,6 +17,10 @@ void apreciaza_comentariu();
 void afiseaza_sugestii();
 void afiseaza_sugestie();
 
+void creeazaPostare();
+void afiseazaToatePostarile();
+void afiseazaPostareCuId();
+
 void meniu();
 
 #endif // MENIU_H_INCLUDED
