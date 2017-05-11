@@ -1,12 +1,12 @@
 #include <bits/stdc++.h>
 #include <ctime>
 
-#include "util.h"
 #include "trie.h"
 #include "paire.h"
 #include "persoana.h"
 #include "comentariu.h"
 #include "node.h"
+#include "util.h"
 
 using namespace std;
 
@@ -59,6 +59,7 @@ void Comentariu::add_like(Persoana *pers)
 {
     string nume = pers->name;
     int id = pers->exist[nume];
+
     people_like_ids.push_back(id);
     no_likes++;
 }
@@ -67,8 +68,10 @@ ostream &operator <<(ostream & out, Comentariu comm)
 {
     Persoana *pers = pers->give_back[comm.author_id];
     string nume = pers->who[pers->indice];
+
     Date d = comm.getDate();
     string dd = convertDateToString(d);
+
     Time t = comm.getTime();
     string tt = convertTimeToString(t);
 

@@ -4,6 +4,7 @@
 #include "util.h"
 #include "postare.h"
 #include "sugestii.h"
+#include "comentariu.h"
 
 #include <cstdio>
 #include <iostream>
@@ -21,12 +22,12 @@ void sandbox()
     Persoana *ali=new Persoana("ali");
     Persoana *alex=new Persoana("alex");
 
-    
+
     // for(auto it: Persoana::exist)
     // {
     //     cout<< it.first << " " << it.second <<"\n";
     // }
-    
+
 
     ion->follow(albert);
     ion->follow(albert2);
@@ -53,6 +54,24 @@ void sandbox()
     Persoana::read_followings("follow.txt");
 }
 
+void test_comentarii()
+{
+    Persoana *ion=new Persoana("ion");
+    Persoana *albu=new Persoana("albu");
+    string text = "first comm";
+    Comentariu *comm = new Comentariu(ion, text);
+    cout << comm;
+    Comentariu *comm2 = new Comentariu(ion, "fsfns");
+    cout << comm2;
+    comm->add_like(albu);
+    comm2->setText("vdvdvdg");
+    cout << comm->getNoLikes() << '\n';
+    cout << comm2->getAuthorId() << '\n';
+    cout << comm->getAuthorName() << '\n';
+    //cout << comm->getDate() << '\n';
+    //cout << comm2->getTime() << '\n';
+    cout << comm2->getText() << '\n';
+}
 
 void test_util(){
     Date date;

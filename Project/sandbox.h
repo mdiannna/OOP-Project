@@ -7,6 +7,9 @@ void sandbox();
 void test_util();
 // function for testing Postare class
 void testPostare();
-
+//function for testing comentarii
+void test_comentarii();
+//function for testing sugestii
+void test_sugestii();
 #endif // SANDBOX_H_INCLUDED
 
