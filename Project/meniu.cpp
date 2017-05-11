@@ -1,4 +1,7 @@
 #include <bits/stdc++.h>
+#include <stdlib.h>
+#include <conio.h>
+
 #include "persoana.h"
 #include "postare.h"
 #include "view.h"
@@ -11,7 +14,7 @@ using namespace std;
 
 void adauga_comentariu()
 {
-
+    system("reset");
 }
 
 
@@ -73,7 +76,7 @@ void meniu()
 
             break;
         default:
-            printRed("Enter a valid selection!!!");
+            printError("Enter a valid selection!!!");
         }
     }while(choice != 8);
 }
