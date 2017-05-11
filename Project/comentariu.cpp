@@ -35,12 +35,12 @@ string Comentariu::getText()
     return text;
 }
 
-Date Comentariu::getDate()
+Date Comentariu::getDate() const
 {
     return date;
 }
 
-Time Comentariu::getTime()
+Time Comentariu::getTime() const
 {
     return time;
 }
@@ -64,7 +64,7 @@ void Comentariu::add_like(Persoana *pers)
     no_likes++;
 }
 
-ostream &operator <<(ostream & out, Comentariu comm)
+ostream &operator <<(ostream & out, const Comentariu &comm)
 {
     Persoana *pers = pers->give_back[comm.author_id];
     string nume = pers->who[pers->indice];

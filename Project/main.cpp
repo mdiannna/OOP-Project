@@ -16,5 +16,6 @@ int main()
 
     cout << "\n";
    	test_comentarii();
+
     return 0;
 }

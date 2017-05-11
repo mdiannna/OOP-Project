@@ -26,14 +26,14 @@ public:
     string getAuthorName();
     int getNoLikes();
     string getText();
-    Date getDate();
-    Time getTime();
+    Date getDate() const;
+    Time getTime() const;
     list<int> getPeopleLike();
 
     void setText(string _text);
     void add_like(Persoana *pers);
 
-    friend ostream& operator << (ostream &, Comentariu );
+    friend ostream& operator << (ostream &, const Comentariu &);
 
 };
 

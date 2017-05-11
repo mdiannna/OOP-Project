@@ -1,6 +1,8 @@
 #include "util.h"
 #include <ctime>
+#include <string>
 
+using namespace std;
 
 /************************/
 // Date functions
@@ -132,11 +134,11 @@ Date getDateNow(){
 
 	time_t t = time(0);   // get time now
     struct tm * now = localtime( & t );
-    
+
     result.setYear(now->tm_year + 1900);
     result.setMonth(now->tm_mon + 1);
     result.setDay(now->tm_mday);
-	
+
 	return result;
 }
 
@@ -169,7 +171,7 @@ Time getTimeNow(){
 
 	time_t t = time(0);   // get time now
     struct tm * now = localtime( & t );
-    
+
     result.setHour(now->tm_hour);
     result.setMinute(now->tm_min);
     result.setSecond(now->tm_sec);
