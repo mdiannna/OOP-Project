@@ -3,14 +3,18 @@
 
 #include <iostream>
 #include <list>
+#include <vector>
+#include <map>
 #include "persoana.h"
 #include "util.h"
 #include "console.h"
 
 using namespace std;
 
+
 class Postare{
-    static int id;
+    static int last_id;
+    int id;
 	// constants:
     const int TWEET_LIMIT = 140;
 
@@ -32,19 +36,18 @@ class Postare{
     // TO DO:
     list<int> people_like_ids;
     // list of comments to post
-    // list<Comments> comments_to_post; 
+    list<int> comments_id; 
 
     friend ostream &operator<<(ostream &, const Postare&);
     
 
+
 public:
 	// methods:
-	Postare(string, int);
-    
+	Postare(string, int); 
     int getID() const;
 
-    void postManager();
-    void addLike();
+   
 
 
 /*** GET functions ***/    
@@ -52,31 +55,41 @@ public:
     string getText() const;
     int getTextLength() const;
     int getAuthorId() const;
-    // persoana getAuthor();
     Date getPostDate() const;
     string getPostDateAsString() const;
     Time getPostTime() const;
     string getPostTimeAsString() const;
-    //TO DO: privacy level??
     int getNrLikes() const;
+    list<int> getComments() const;
+    
     // TO DO:
     list<int> getPeopleLikeIDs() const;
 
 /*** SET functions ***/
-    //implicit set length
     void setText(string);
     void setAuthorId(int author_id);
-    //???:
-    // void setAuthor(Persoana);
+    void setAuthor(Persoana);
     void setPostDate(Date);
     void setPostTime(Time);
-    //TO DO: privacy level??
     void setNrLikes(int);
+
+
+    void printComments() const;
+    void addLike();
+    void addComment(int);
+
     // TO DO:
     // void addPeopleLikeID(int);
     // void addPeopleLike(Person);
 
 };
 
+
+
+
+static map<int, Postare*> postari;
+
+void printAllPosts();
+Postare * getPostareById(int);
 
 #endif // POSTARI_H_INCLUDED
