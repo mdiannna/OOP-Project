@@ -8,7 +8,7 @@ using namespace std;
 
 int main()
 {
-
+/*
     sandbox();
 	test_util();
 	testConsole();
@@ -16,6 +16,7 @@ int main()
 
     cout << "\n";
    	test_comentarii();
-
+*/
+    test_sugestii();
     return 0;
 }

@@ -10,35 +10,24 @@ using namespace std;
 
 Sugestie::Sugestie(Persoana *pers)
 {
-    person = pers;
-    set<int> s;
-    set<paire> follow_sugg = pers->ordonati;
-    set<paire>::iterator it;
-    for(it = follow_sugg.begin(); it != follow_sugg.end(); it++)
+    persoana_id = pers->indice;
+    set<int> f = pers->list_follow;
+    set<int> f1;
+    set<int> f2;
+    set<int>::iterator it;
+    for(it = f.begin(); it != f.end(); it++)
     {
-        string nume = it->nume;
-        int i = pers->exist[nume];
-        s.insert(i);
-    }
-    set<int>::iterator it2;
-    set<int> follower2;
-    for(it2 = s.begin(); it2 != s.end(); it2++)
-    {
-        Persoana *pers2= pers->give_back[*it2];
-        follow_sugg = pers2->ordonati;
-        for(it = follow_sugg.begin(); it != follow_sugg.end(); it++)
+        Persoana *p = getPersoanaById(*it);
+        f2 = p->list_follow;
+        set<int> ::iterator it2;
+        for(it2 = f2.begin(); it2 != f2.end(); it2++)
         {
-            string nume = it->nume;
-            int i = pers->exist[nume];
-            follower2.insert(i);
+            f1.insert(*it2);
         }
     }
-    for(it2 = follower2.begin(); it2 != follower2.end(); it++)
-    {
-        int i = *it2;
-        Persoana *pers2 = pers->give_back[i];
-        sugestii.push_back(i);
-    }
+    for(it = f1.begin(); it != f1.end(); it++)
+        if(f.find(*it))sugestii.push_back(*it);
+
 }
 
 void Sugestie::afiseaza_toate_sugestiile()
@@ -47,7 +36,7 @@ void Sugestie::afiseaza_toate_sugestiile()
     vector<int> ::iterator i;
     for(i = sugestii.begin(); i != sugestii.end(); i++)
     {
-        cout << person->who[*i] << "\n";
+        cout << getPersoanaNameById(*i) << "\n";
     }
     cout << '\n';
 }
@@ -57,5 +46,5 @@ void Sugestie::afiseaza_sugestie()
     int n = sugestii.size();
     srand (time(NULL));
     int i = rand() % n;
-    cout << "Sugestie: \n" << person->who[i] << '\n';
+    cout << "Sugestie: \n" << getPersoanaNameById(i) << '\n';
 }

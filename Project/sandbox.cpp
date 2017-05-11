@@ -60,9 +60,9 @@ void test_comentarii()
     Persoana *ion=new Persoana("ion");
     Persoana *albu=new Persoana("albu");
     string text = "first comm";
-    Comentariu *comm = new Comentariu(ion, text);
+    Comentariu *comm = new Comentariu(ion, 1, text);
     cout << *comm;
-    Comentariu *comm2 = new Comentariu(ion, "fsfns");
+    Comentariu *comm2 = new Comentariu(ion, 1, "fsfns");
     cout << *comm2;
     comm->add_like(albu);
     comm2->setText("vdvdvdg");

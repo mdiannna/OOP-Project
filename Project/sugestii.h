@@ -11,7 +11,7 @@ using namespace std;
 
 class Sugestie
 {
-    Persoana *person;
+    int persoana_id;
     vector<int> sugestii;
 public:
     Sugestie(Persoana *pers);

@@ -13,15 +13,20 @@ using namespace std;
 
 class Comentariu
 {
+    static int last_id;
+    int id;
     int author_id;
+    int post_id;
     string text;
     Date date;
     Time time;
     int no_likes;
     list<int> people_like_ids;
 public:
-    Comentariu(Persoana *pers, string _text);
+    Comentariu(Persoana *pers, int id_postare, string _text);
 
+    int getId() const;
+    int getPostId() const;
     int getAuthorId() const;
     string getAuthorName();
     int getNoLikes() const;

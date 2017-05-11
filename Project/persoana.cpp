@@ -57,10 +57,10 @@ Persoana::Persoana(string nume)
 
     who[exist[nume]]=nume;
 
-    
+
     Persoana::give_back[exist[nume]]=this;
 
-    
+
     Persoana::global_mutex.unlock();
 
     name=nume;
@@ -85,7 +85,7 @@ void Persoana::follow(Persoana *alta)
         alta->isfollowed(this);
         following->insert(alta->name, alta->indice);
     }
-
+    list_follow.insert(alta->indice);
 }
 
 void Persoana::isfollowed(Persoana *alta)

@@ -12,14 +12,32 @@
 
 using namespace std;
 
-Comentariu::Comentariu(Persoana *pers, string _text)
+int Comentariu::last_id = 0;
+
+Comentariu::Comentariu(Persoana *pers, int id_postare, string _text)
 {
     string nume = pers->name;
+    post_id = id_postare;
     author_id = pers->exist[nume];
     text = _text;
     date = getDateNow();
     time = getTimeNow();
     no_likes = 0;
+    last_id++;
+    id = last_id + 1;
+    comentarii.push_back(*this);
+    //Postare* post = getPostareById(id_postare);
+    //post->addComment(id);
+}
+
+int Comentariu::getId() const
+{
+    return id;
+}
+
+int Comentariu::getPostId() const
+{
+    return post_id;
 }
 
 int Comentariu::getAuthorId() const
@@ -79,14 +97,21 @@ ostream &operator <<(ostream & out, const Comentariu &comm)
 
     int nr = comm.getNoLikes();
 
+    out << "--------------COMMENT----" << comm.getId() << "--------\n";
+    out << "          ";
     printBlue("@" + nume);
     out << "          ";
     printGreen(dd);
     out << "          ";
     printRed(tt);
-    out << " \n\n";
+    out << " \n";
+    out << "          ";
     out << comm.text << "\n\n";
+    out << "          ";
     printCyan(nr);
     if(nr >= 1 || nr == 0)printCyan(" likes\n\n");
     else printCyan(" like\n\n");
+    out << "\n---------------------------------\n";
+
+    return out;
 }

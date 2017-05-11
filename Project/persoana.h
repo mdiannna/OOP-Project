@@ -29,6 +29,7 @@ class Persoana
     string name;
     int indice;
     trie *followers, *following;
+    set<int> list_follow;
 
     Persoana(string nume);
 
