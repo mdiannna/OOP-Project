@@ -2,6 +2,11 @@
 #include "console.h"
 
 
+View::View(string title){
+	this->title = title;
+}
+
+
 void View::setTitle(string title){
 	this->title = title;
 }
@@ -14,23 +19,25 @@ string View::getTitle()  const{
 
 void View::render_header() const{
 	cout << "\n";
-	cout << "------------------------------\n";
-	printBlue(this->getTitle() + "\n");
+	printBlue("------------------------------\n");
+	cout << this->getTitle() << "\n";
 	// cout << this->title << "\n";
-	cout << "------------------------------\n";
+	printBlue("------------------------------\n");
+
 }
 
 
 void View::render_content()  const{
-	cout << "content will be here\n";
+	printYellow("content will be here\n");
 }
 
 
 
 void View::render_footer()  const{
 	cout << "\n";
-	cout << "_________________________________\n";
-	cout << "Copyright Console Tweet 2017" << "\n\n\n";
+	printBlue("_________________________________\n");
+	printBlue("Copyright Console Tweet 2017");
+	cout << "\n\n\n";
 }
 
 
@@ -40,3 +47,24 @@ ostream & operator<<(ostream& out, const View& view){
 	view.render_footer();
 	return out;
 }
+
+
+
+/**********************************/
+//PostView
+/**********************************/
+void PostView::render_content()  const{
+	printYellow("Content from PostView for Post ");
+	printMagenta(this->post_id);
+	printYellow(" will be here\n");
+}
+
+
+/**********************************/
+//AllPostsView
+/**********************************/
+void AllPostsView::render_content()  const{
+	printYellow("Content from AllPostsView be here\n");
+}
+
+
