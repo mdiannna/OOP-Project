@@ -2,6 +2,9 @@
 
 int Postare::last_id = 0;
 
+Postare::Postare(){
+}
+
 // Constructor
 Postare::Postare(string text, int author_id){
 	try{
@@ -28,7 +31,7 @@ Postare::Postare(string text, int author_id){
 	this->id = last_id;
 
 	
-	postari.insert({this->id, this});
+	printRed(this);
 	// postari[this->id] = *this;
 	
 	printSuccess("Postare creata cu succes");
@@ -88,7 +91,6 @@ int Postare::getNrLikes() const{
 
 
 list<int> Postare::getComments() const{
-
 	return this->comments_id;
 }
 
@@ -135,7 +137,7 @@ void Postare::setNrLikes(int nr_likes){
 
 
 void Postare::printComments() const{
-	cout << "Comentarii \n";
+	cout << "Comentarii  la postarea " << this->getID() << "\n";
 	list<int> comments_id = this->getComments();
 	for(list<int>::iterator it = comments_id.begin(); it != comments_id.end(); it++){
 		cout << *it << " ";
@@ -150,8 +152,7 @@ void Postare::addLike(){
 
 		
 void Postare::addComment(int comment_id){
-	list<int> comments_id = this->getComments();
-	comments_id.push_back(comment_id);
+	this->comments_id.push_back(comment_id);
 }
 
 
@@ -178,6 +179,32 @@ ostream &operator<<(ostream &out, const Postare& post){
 }
 
 
+// ostream &operator=(Postare & post){
+
+// }
+
+
+
+ostream &operator<<(ostream &out, Postare * post){
+	out << "--------------POSTARE----" << post->getID() << "--------\n";
+	printBlue("@");
+	// printBlue(getPersoanaNameById(post->getAuthorId()));
+	// out << "          ";
+	printYellow(post->getPostDateAsString());
+	// out << " ";
+	// printMagenta(post->getPostTimeAsString());
+	// out << "\n";
+	// out << post->getText();
+	// out << "\n";
+	// printGreen(post->getNrLikes());
+	// printGreen(" likes");
+	// out << "\n---------------------------------\n";
+	
+	// post->printComments();
+	return out;
+}
+
+
 
 
 
@@ -188,8 +215,16 @@ ostream &operator<<(ostream &out, const Postare& post){
 void printAllPosts(){
 	cout << "Toate postarile:\n";
 
+	// Postare p("lalala", 3, 4/);
+
 	for(map<int, Postare*>::iterator it= postari.begin(); it!=postari.end(); it++){
-		cout << *it->second;
+		// p.setID(it->second.getId());
+		// cout << it->second;
+		// cout << it->second->getText();
+		// p.nr_likes = it->second->nr_likes;
+		// cout << p << "\n";
+		// cout << *p;
+		cout << "\n";
 	}
 }
 

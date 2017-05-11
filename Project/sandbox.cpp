@@ -72,6 +72,10 @@ void test_comentarii()
     cout << comm->getDate() << '\n';
     cout << comm2->getTime() << '\n';
     cout << comm2->getText() << '\n';
+    
+
+    // Comentariu comm3(ion, 2, "fsfns");
+    
 }
 
 void test_util(){
@@ -110,21 +114,26 @@ void testConsole(){
 void testPostare(){
     string test = "lalala";
     // functioneaza
-    Postare postare1(test, 2);
+    Postare postare1 = creeazaPostare(test, 2);
+    // Postare postare1(test, 2);
+
     cout << postare1 << "\n";
 
-    Postare postare2(test + "a", 5);
+    Postare postare2 = creeazaPostare(test + "a", 5);
     cout << postare2 << "\n";
 
     for(int i=0; i<150; i++)
         test = test + "X";
     // genereaza eroare
-    Postare postare3(test, 2);
+    Postare postare3 = creeazaPostare(test, 2);
 //     cout << postare3;
 
 
-    Postare postare4("uuuuuuuuu", 7);
+    Postare postare4 = creeazaPostare("uuuuuuuuu", 7);
     cout << postare4 << "\n";
+
+    Postare postare5 = creeazaPostare("5uuuuuuuuu", 4);
+    cout << postare5 << "\n";
 
     printAllPosts();
 }

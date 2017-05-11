@@ -28,6 +28,7 @@ Comentariu::Comentariu(Persoana *pers, int id_postare, string _text)
     id = last_id + 1;
     //comentarii.push_back(*this);
     Postare* post = getPostareById(id_postare);
+    cout << "Add comment to post" << id_postare << "\n";
     post->addComment(id);
 }
 
@@ -87,6 +88,7 @@ void Comentariu::add_like(Persoana *pers)
 
 ostream &operator <<(ostream & out, const Comentariu &comm)
 {
+    cout  << "ID postare:" << comm.post_id << "\n";
     Persoana *pers = pers->give_back[comm.author_id];
     string nume = pers->who[pers->indice];
 

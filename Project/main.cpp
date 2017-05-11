@@ -15,7 +15,9 @@ int main()
  	testPostare();
     test_comentarii();
     cout << "\n";
+    cout << "\n\n------------\n";
 
+    // printAllPosts();
     //test_sugestii();
     return 0;
 }
