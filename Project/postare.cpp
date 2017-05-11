@@ -1,15 +1,18 @@
 #include "postare.h"
 
+int Postare::id = 0;
+
 // Constructor
 Postare::Postare(string text, int author_id){
 	try{
 		if(text.length() > this->TWEET_LIMIT)
-			throw "Postarea nu a fost creata - depaseste lungimea de 140 caractere.";
+			throw "Postarea '" + text + "' nu a fost creata - depaseste lungimea de 140 caractere.";
 		else
 			this->text_len = text.length();	
 	}
-	catch(char const* error){
+	catch(string error){
 		printError(error);
+		cout << "\n";
 		return;
 	}
 
@@ -19,14 +22,22 @@ Postare::Postare(string text, int author_id){
 	this->post_date = getDateNow();
 	this->post_time = getTimeNow();
 	this->nr_likes = 0;
+	this->id = id+1;
 
 	
 	printSuccess("Postare creata cu succes");
 }
 
+
+int Postare::getID() const{
+	return this->id;
+}
+
+
 void Postare::postManager(){
     cout << "Post Manager\n";
 }
+
 
 void Postare::addLike(){
 	this->nr_likes++;
@@ -120,7 +131,7 @@ void Postare::addLike(){
 		
 
 ostream &operator<<(ostream &out, const Postare& post){
-	out << "\n--------------POSTARE------------\n";
+	out << "--------------POSTARE----" << post.getID() << "--------\n";
 	printBlue("@author");
 	printBlue(post.getAuthorId());
 	out << "          ";

@@ -12,7 +12,7 @@ int main()
     // sandbox();
 	// test_util();
 //	testConsole();
- //	testPostare();
+ 	testPostare();
 
     cout << "\n";
    test_comentarii();
