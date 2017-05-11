@@ -203,9 +203,6 @@ string convertTimeToString(Time t){
 	return result;
 }
 /********************/
-<<<<<<< HEAD
-=======
-
 
 /********************/
 //Operators overloading
@@ -220,4 +217,4 @@ ostream& operator<<(ostream &out, const Time& time){
 	out << time.getTimeAsString();
 	return out;
 }
->>>>>>> 0f01a7ff2c1452a0e0df89a10cd23bf2d7704bfe
+

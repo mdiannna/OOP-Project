@@ -1,7 +1,7 @@
 #include <iostream>
 #include "persoana.h"
-// #include "postare.h"
-// #include "util.h"
+#include "postare.h"
+#include "util.h"
 #include "sandbox.h"
 
 using namespace std;
@@ -13,6 +13,6 @@ int main()
 	testConsole();
  	testPostare();
     test_comentarii();
- 	testPostare();
+    //test_sugestii();
     return 0;
 }

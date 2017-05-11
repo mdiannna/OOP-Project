@@ -22,9 +22,9 @@ class Comentariu
 public:
     Comentariu(Persoana *pers, string _text);
 
-    int getAuthorId();
+    int getAuthorId() const;
     string getAuthorName();
-    int getNoLikes();
+    int getNoLikes() const;
     string getText();
     Date getDate() const;
     Time getTime() const;

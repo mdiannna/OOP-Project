@@ -7,6 +7,8 @@
 #include "comentariu.h"
 #include "node.h"
 #include "util.h"
+#include "console.h"
+#include "colors.h"
 
 using namespace std;
 
@@ -20,12 +22,12 @@ Comentariu::Comentariu(Persoana *pers, string _text)
     no_likes = 0;
 }
 
-int Comentariu::getAuthorId()
+int Comentariu::getAuthorId() const
 {
     return author_id;
 }
 
-int Comentariu::getNoLikes()
+int Comentariu::getNoLikes() const
 {
     return no_likes;
 }
@@ -75,6 +77,16 @@ ostream &operator <<(ostream & out, const Comentariu &comm)
     Time t = comm.getTime();
     string tt = convertTimeToString(t);
 
-    out << nume << " " << dd << " " << tt << " \n\n";
-    out << comm.text << "\n\n\n";
+    int nr = comm.getNoLikes();
+
+    printBlue("@" + nume);
+    out << "          ";
+    printGreen(dd);
+    out << "          ";
+    printRed(tt);
+    out << " \n\n";
+    out << comm.text << "\n\n";
+    printCyan(nr);
+    if(nr >= 1 || nr == 0)printCyan(" likes\n\n");
+    else printCyan(" like\n\n");
 }
