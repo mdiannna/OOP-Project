@@ -98,13 +98,25 @@ void test_util(){
 }
 
 
+
+void testConsole(){
+    printError("This is an error");
+    printWarning("This is a warning");
+    printSuccess("Success message");
+}
+
+
 void testPostare(){
     string test = "lalala";
-
-    for(int i=0; i<150; i++)
-        test = test + "X";
-
-    Postare *postare = new Postare(test, 2);
-
+    // functioneaza
+    Postare postare1(test, 2);
+    cout << postare1;
+    
+//     for(int i=0; i<150; i++)
+//         test = test + "X";
+//     // genereaza eroare
+//     Postare *postare2 = new Postare(test, 2);
+//     cout << *postare2;
+// 
 }
 

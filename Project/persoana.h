@@ -32,6 +32,8 @@ class Persoana
 
     Persoana(string nume);
 
+    Persoana* getPersoanaByNo(int no);
+    Persoana* getPersoanaByString(string x);
     void follow(Persoana *alta);
     void isfollowed(Persoana *alta);
     void search_following(string x);
