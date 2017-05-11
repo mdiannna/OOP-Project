@@ -39,11 +39,13 @@ class Postare{
     list<int> comments_id; 
 
     friend ostream &operator<<(ostream &, const Postare&);
+    // friend ostream &operator<<(ostream &, const Postare *);
     
 
 
 public:
 	// methods:
+    Postare();
 	Postare(string, int); 
     int getID() const;
 
@@ -91,5 +93,13 @@ static map<int, Postare*> postari;
 
 void printAllPosts();
 Postare * getPostareById(int);
+
+
+static Postare creeazaPostare(string text, int author_id){
+    Postare *p = new Postare(text, author_id);
+    postari.insert({p->getID(), p});
+    return *p;
+}
+
 
 #endif // POSTARI_H_INCLUDED

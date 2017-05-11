@@ -2,6 +2,9 @@
 
 int Postare::last_id = 0;
 
+Postare::Postare(){
+}
+
 // Constructor
 Postare::Postare(string text, int author_id){
 	try{
@@ -88,7 +91,6 @@ int Postare::getNrLikes() const{
 
 
 list<int> Postare::getComments() const{
-
 	return this->comments_id;
 }
 
@@ -135,11 +137,13 @@ void Postare::setNrLikes(int nr_likes){
 
 
 void Postare::printComments() const{
-	cout << "Comentarii \n";
+	cout << "Comentarii  la postarea " << this->getID() << ":\n";
 	list<int> comments_id = this->getComments();
 	for(list<int>::iterator it = comments_id.begin(); it != comments_id.end(); it++){
-		cout << *it << " ";
+		printCyan(*it);
+		cout << " ";
 	}
+	cout << "\n";
 }
 
 
@@ -150,8 +154,7 @@ void Postare::addLike(){
 
 		
 void Postare::addComment(int comment_id){
-	list<int> comments_id = this->getComments();
-	comments_id.push_back(comment_id);
+	this->comments_id.push_back(comment_id);
 }
 
 
@@ -179,9 +182,6 @@ ostream &operator<<(ostream &out, const Postare& post){
 
 
 
-
-
-
 /************************/
 //General functions
 /************************/
@@ -189,7 +189,8 @@ void printAllPosts(){
 	cout << "Toate postarile:\n";
 
 	for(map<int, Postare*>::iterator it= postari.begin(); it!=postari.end(); it++){
-		cout << *it->second;
+		cout << *(it->second);
+		cout << "\n";
 	}
 }
 
