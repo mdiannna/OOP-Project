@@ -31,7 +31,7 @@ Postare::Postare(string text, int author_id){
 	this->id = last_id;
 
 	
-	printRed(this);
+	postari.insert({this->id, this});
 	// postari[this->id] = *this;
 	
 	printSuccess("Postare creata cu succes");
@@ -140,8 +140,10 @@ void Postare::printComments() const{
 	cout << "Comentarii  la postarea " << this->getID() << "\n";
 	list<int> comments_id = this->getComments();
 	for(list<int>::iterator it = comments_id.begin(); it != comments_id.end(); it++){
-		cout << *it << " ";
+		printCyan(*it);
+		cout << " ";
 	}
+	cout << "\n";
 }
 
 
@@ -185,24 +187,24 @@ ostream &operator<<(ostream &out, const Postare& post){
 
 
 
-ostream &operator<<(ostream &out, Postare * post){
-	out << "--------------POSTARE----" << post->getID() << "--------\n";
-	printBlue("@");
-	// printBlue(getPersoanaNameById(post->getAuthorId()));
-	// out << "          ";
-	printYellow(post->getPostDateAsString());
-	// out << " ";
-	// printMagenta(post->getPostTimeAsString());
-	// out << "\n";
-	// out << post->getText();
-	// out << "\n";
-	// printGreen(post->getNrLikes());
-	// printGreen(" likes");
-	// out << "\n---------------------------------\n";
+// ostream &operator<<(ostream &out, Postare * post){
+// 	out << "--------------POSTARE----" << post->getID() << "--------\n";
+// 	printBlue("@");
+// 	printBlue(getPersoanaNameById(post->getAuthorId()));
+// 	out << "          ";
+// 	printYellow(post->getPostDateAsString());
+// 	out << " ";
+// 	printMagenta(post->getPostTimeAsString());
+// 	out << "\n";
+// 	out << post->getText();
+// 	out << "\n";
+// 	printGreen(post->getNrLikes());
+// 	printGreen(" likes");
+// 	out << "\n---------------------------------\n";
 	
-	// post->printComments();
-	return out;
-}
+// 	post->printComments();
+// 	return out;
+// }
 
 
 
@@ -219,12 +221,11 @@ void printAllPosts(){
 
 	for(map<int, Postare*>::iterator it= postari.begin(); it!=postari.end(); it++){
 		// p.setID(it->second.getId());
-		// cout << it->second;
-		// cout << it->second->getText();
+		// cout << it->second->getText() << "***\n";
+		cout << *(it->second);
 		// p.nr_likes = it->second->nr_likes;
 		// cout << p << "\n";
 		// cout << *p;
-		cout << "\n";
 	}
 }
 

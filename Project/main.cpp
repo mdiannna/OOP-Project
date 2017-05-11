@@ -8,16 +8,16 @@ using namespace std;
 
 int main()
 {
-
     sandbox();
 	test_util();
 	testConsole();
  	testPostare();
     test_comentarii();
+
     cout << "\n";
     cout << "\n\n------------\n";
 
-    // printAllPosts();
+    printAllPosts();
     //test_sugestii();
     return 0;
 }

@@ -74,7 +74,7 @@ void test_comentarii()
     cout << comm2->getText() << '\n';
     
 
-    // Comentariu comm3(ion, 2, "fsfns");
+    Comentariu comm3(ion, 2, "fsfns");
     
 }
 
@@ -162,8 +162,7 @@ void test_sugestii()
     chat(ali, albert, 100);
 
     Sugestie sugestie1(ion);
-    sugestie1.afiseaza_sugestie();
-    sugestie1.afiseaza_toate_sugestiile();
 
-
+    //sugestie1.afiseaza_sugestie();
+    //sugestie1.afiseaza_toate_sugestiile();
 }

@@ -14,7 +14,7 @@ Sugestie::Sugestie(Persoana *pers)
     set<int> f = pers->list_follow;
     set<int> f1;
     set<int> f2;
-    set<int>::iterator it;
+    set<int>::iterator it, it2;
     for(it = f.begin(); it != f.end(); it++)
     {
         Persoana *p = getPersoanaById(*it);
@@ -25,31 +25,57 @@ Sugestie::Sugestie(Persoana *pers)
             f1.insert(*it2);
         }
     }
-    set<int> ::iterator it2;
-    for(it = f1.begin(); it != f1.end(); it++)
+    it = f.begin();
+    it2 = f1.begin();
+    while(it2 != f1.end())
     {
-        int ok = 1;
-        for(it2 = f.begin(); it2 != f.end() && ok; it++)
-            if(*it == *it2)ok = 0;
-        if(ok)sugestii.push_back(*it);
+        cout<<*it<<"  "<<*it2<<'\n';
+        if(*it < *it2)
+        {
+             it++;
+        }
+        else if(*it2 == *it)
+        {
+            it2++;
+            it++;
+        }
+        else
+        {
+            sugestii.push_back(*it2);
+            it++;
+        }
     }
 }
 
 void Sugestie::afiseaza_toate_sugestiile()
 {
-    cout << "Sugestii: \n";
-    vector<int> ::iterator i;
-    for(i = sugestii.begin(); i != sugestii.end(); i++)
+    if(sugestii.size())
     {
-        cout << getPersoanaNameById(*i) << "\n";
+        cout << "Sugestii: \n";
+        vector<int> ::iterator i;
+        for(i = sugestii.begin(); i != sugestii.end(); i++)
+        {
+            cout << getPersoanaNameById(*i) << "\n";
+        }
+        cout << '\n';
     }
-    cout << '\n';
+    else
+    {
+        cout << "Nu sunt sugestii de afisat\n\n";
+    }
 }
 
 void Sugestie::afiseaza_sugestie()
 {
     int n = sugestii.size();
-    srand (time(NULL));
-    int i = rand() % n;
-    cout << "Sugestie: \n" << getPersoanaNameById(i) << '\n';
+    if(n)
+    {
+        srand (time(NULL));
+        int i = rand() % n;
+        cout << "Sugestie: \n" << getPersoanaNameById(i) << '\n';
+    }
+    else
+    {
+        cout << "Nu sunt sugestii de afisat\n\n";
+    }
 }
