@@ -1,8 +1,21 @@
 #ifndef UTIL_H_INCLUDED
 #define UTIL_H_INCLUDED
+
 #include <string> 
+#include <sstream>
 
 using namespace std;
+
+
+/********************/
+//Implementation of to_String function
+/********************/
+template <typename T>
+std::string to_string(const T& value) {
+    std::stringstream ss;
+    ss << value;
+    return ss.str();
+}
 
 
 /********************/

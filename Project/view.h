@@ -1,5 +1,5 @@
-#ifndef VIEWS_H_INCLUDED
-#define VIEWS_H_INCLUDED
+#ifndef VIEWS_H
+#define VIEWS_H
 
 #include <iostream>
 

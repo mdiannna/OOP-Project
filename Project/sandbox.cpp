@@ -60,12 +60,12 @@ void test_comentarii()
     Persoana *albu=new Persoana("albu");
     string text = "first comm";
     Comentariu *comm = new Comentariu(ion, text);
-    cout << comm;
+    cout << *comm;
     Comentariu *comm2 = new Comentariu(ion, "fsfns");
-    cout << comm2;
+    cout << *comm2;
     comm->add_like(albu);
     comm2->setText("vdvdvdg");
-    cout << comm->getNoLikes() << '\n';
+    cout << "\n" << comm->getNoLikes() << '\n';
     cout << comm2->getAuthorId() << '\n';
    // cout << comm->getAuthorName() << '\n';
     cout << comm->getDate() << '\n';
