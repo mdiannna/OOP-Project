@@ -202,7 +202,6 @@ string convertTimeToString(Time t){
 	result = result + hour + ":" + minute + ":" + second;
 	return result;
 }
-/********************/
 
 
 /********************/

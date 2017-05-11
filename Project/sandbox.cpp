@@ -14,7 +14,8 @@ using namespace std;
 
 void sandbox()
 {
-//    freopen("output.txt","w",stdout);
+    //freopen("output.txt","w",stdout);
+
     Persoana *albert=new Persoana("albert");
     Persoana *ion=new Persoana("ion");
     Persoana *albert2=new Persoana("albert");
@@ -114,7 +115,7 @@ void testPostare(){
 
     Postare postare2(test + "a", 5);
     cout << postare2 << "\n";
-   
+
     for(int i=0; i<150; i++)
         test = test + "X";
     // genereaza eroare
@@ -124,6 +125,35 @@ void testPostare(){
 
     Postare postare4("uuuuuuuuu", 7);
     cout << postare4 << "\n";
- 
+
 }
 
+void test_sugestii()
+{
+    Persoana *albert=new Persoana("albert");
+    Persoana *ion=new Persoana("ion");
+    Persoana *albert2=new Persoana("albert");
+    Persoana *albu=new Persoana("albu");
+    Persoana *ali=new Persoana("ali");
+    Persoana *alex=new Persoana("alex");
+
+    ion->follow(albert);
+    ion->follow(albert2);
+    ion->follow(albu);
+    ion->follow(ali);
+    ion->follow(alex);
+    albert->follow(albu);
+    albert->follow(alex);
+
+    chat(ion, alex, 60);
+    chat(ion, alex, 10);
+    chat(ion, albert, 65);
+    chat(ali,ion, 20);
+    chat(ali, albert, 100);
+
+    Sugestie sugestie1(ion);
+    sugestie1.afiseaza_sugestie();
+    sugestie1.afiseaza_toate_sugestiile();
+
+
+}
