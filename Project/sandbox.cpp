@@ -154,6 +154,6 @@ void test_sugestii()
 
     Sugestie sugestie1(ion);
 
-    //sugestie1.afiseaza_sugestie();
-    //sugestie1.afiseaza_toate_sugestiile();
+    sugestie1.afiseaza_sugestie();
+    sugestie1.afiseaza_toate_sugestiile();
 }
