@@ -10,6 +10,7 @@
 using namespace std;
 
 class Postare{
+    static int id;
 	// constants:
     const int TWEET_LIMIT = 140;
 
@@ -39,8 +40,12 @@ class Postare{
 public:
 	// methods:
 	Postare(string, int);
+    
+    int getID() const;
+
     void postManager();
     void addLike();
+
 
 /*** GET functions ***/    
     int getTweetLimit() const;

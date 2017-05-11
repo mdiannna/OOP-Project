@@ -8,11 +8,11 @@ using namespace std;
 
 int main()
 {
-
     sandbox();
     test_util();
 	testConsole();
  	testPostare();
     test_comentarii();
+ 	testPostare();
     return 0;
 }

@@ -60,16 +60,16 @@ void test_comentarii()
     Persoana *albu=new Persoana("albu");
     string text = "first comm";
     Comentariu *comm = new Comentariu(ion, text);
-    cout << comm;
+    cout << *comm;
     Comentariu *comm2 = new Comentariu(ion, "fsfns");
-    cout << comm2;
+    cout << *comm2;
     comm->add_like(albu);
     comm2->setText("vdvdvdg");
-    cout << comm->getNoLikes() << '\n';
+    cout << "\n" << comm->getNoLikes() << '\n';
     cout << comm2->getAuthorId() << '\n';
-    cout << comm->getAuthorName() << '\n';
-    //cout << comm->getDate() << '\n';
-    //cout << comm2->getTime() << '\n';
+   // cout << comm->getAuthorName() << '\n';
+    cout << comm->getDate() << '\n';
+    cout << comm2->getTime() << '\n';
     cout << comm2->getText() << '\n';
 }
 
@@ -110,13 +110,20 @@ void testPostare(){
     string test = "lalala";
     // functioneaza
     Postare postare1(test, 2);
-    cout << postare1;
-    
-//     for(int i=0; i<150; i++)
-//         test = test + "X";
-//     // genereaza eroare
-//     Postare *postare2 = new Postare(test, 2);
-//     cout << *postare2;
-// 
+    cout << postare1 << "\n";
+
+    Postare postare2(test + "a", 5);
+    cout << postare2 << "\n";
+   
+    for(int i=0; i<150; i++)
+        test = test + "X";
+    // genereaza eroare
+    Postare postare3(test, 2);
+//     cout << postare3;
+
+
+    Postare postare4("uuuuuuuuu", 7);
+    cout << postare4 << "\n";
+ 
 }
 
