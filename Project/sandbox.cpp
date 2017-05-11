@@ -126,6 +126,7 @@ void testPostare(){
     Postare postare4("uuuuuuuuu", 7);
     cout << postare4 << "\n";
 
+    printAllPosts();
 }
 
 void test_sugestii()
