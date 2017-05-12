@@ -15,6 +15,25 @@ map<int, string> Persoana:: who;
 map<int, Persoana*> Persoana:: give_back;
 mutex Persoana:: global_mutex;
 
+//afisare
+
+ostream &operator<<(ostream &out, const Persoana& pers){
+
+
+    out<<"Persoana are numele "<<name<<"\n";
+    out<<"Top 10 prieteni, dupa conversatii sunt\n";
+
+    pers.show_friends(10);
+    out<<"\n";
+
+    return out;
+}
+
+
+//afisare
+
+
+
 
 
 Persoana* getPersoanaById(int id)

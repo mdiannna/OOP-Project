@@ -51,6 +51,8 @@ class Persoana
 
     void friend chat(Persoana *a, Persoana *b, int minute);
 
+    friend ostream &operator<<(ostream &, const Persoana&);
+
 };
 //map<string, int> Persoana::exist;
 
