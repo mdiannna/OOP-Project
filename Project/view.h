@@ -40,6 +40,9 @@ public:
 	PostView(int post_id, string title) : View(title){
 		this->post_id = post_id;
 	}
+	PostView(int post_id) : View("Post view"){
+		this->post_id = post_id;
+	}
 	PostView() : View("Post view"){}
 
 	void render_content() const;

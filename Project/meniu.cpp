@@ -26,7 +26,7 @@ void adauga_comentariu()
     int id;
     cin >> id;
     cout << "\nIntroduceti comentariul:\n";
-
+// 
     string text;
     cin >> text;
 
@@ -93,12 +93,14 @@ void creeazaPostare(){
     cout << "Introduceti textul postarii: ";
     string text;
     cin >> text;
-    Postare *p = new Postare(text, id);
+    Postare p =creeazaPostare(text, id);
 }
 
 
 void afiseazaToatePostarile(){
-    printAllPosts();
+    View * view = new AllPostsView();
+    cout << *view;
+    delete(view);
 }
 
 void afiseazaPostareCuId(){
@@ -106,8 +108,10 @@ void afiseazaPostareCuId(){
     int id;
     cin >> id;
 
-    Postare *p = getPostareById(id);
-    cout << p;
+    View * view = new PostView(id);
+    cout << *view;
+
+    // delete(view);
 }
 
 void meniu()
@@ -123,7 +127,7 @@ void meniu()
 
         cin >> choice;
         cout << '\n';
-        system("reset");
+        // system("reset");
 
         switch(choice)
         {

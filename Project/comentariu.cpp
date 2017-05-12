@@ -147,7 +147,7 @@ ostream &operator <<(ostream & out, const Comentariu * comm)
 
     int nr = comm->getNoLikes();
 
-    out << "--------------COMMENT----" << comm->getId() << "--------\n";
+    out << "          --------------COMMENT----" << comm->getId() << "--------\n";
     out << "          ";
     // printBlue("@" + nume);
     out << "          ";
@@ -161,7 +161,7 @@ ostream &operator <<(ostream & out, const Comentariu * comm)
     printCyan(nr);
     if(nr >= 1 || nr == 0)printCyan(" likes\n\n");
     else printCyan(" like\n\n");
-    out << "\n---------------------------------\n";
+    out << "\n          ---------------------------------\n";
 
     return out;
 }
