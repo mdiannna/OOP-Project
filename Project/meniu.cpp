@@ -61,7 +61,7 @@ void apreciaza_comentariu()
 
 void afiseaza_sugestii()
 {
-    
+
     cout << "Introduceti numele persoanei pentru care sa se afiseze sugestii: ";
     string nume;
     cin >> nume;
@@ -73,7 +73,7 @@ void afiseaza_sugestii()
 
 void afiseaza_sugestie()
 {
-     system("reset"); 
+     system("reset");
 
     cout << "Introduceti numele persoanei pentru care sa se afiseze o sugestie: ";
     string nume;
@@ -86,7 +86,14 @@ void afiseaza_sugestie()
 
 
 void creeazaPostare(){
+    cout << "Introduceti id ul persoanei care posteaza: ";
+    int id;
+    cin >> id;
 
+    cout << "Introduceti textul postarii: ";
+    string text;
+    cin >> text;
+    Postare *p = new Postare(text, id);
 }
 
 
@@ -95,7 +102,12 @@ void afiseazaToatePostarile(){
 }
 
 void afiseazaPostareCuId(){
+    cout << "Introduceti id ul postarii ce trebuie afisata: ";
+    int id;
+    cin >> id;
 
+    Postare *p = getPostareById(id);
+    cout << p;
 }
 
 void meniu()
