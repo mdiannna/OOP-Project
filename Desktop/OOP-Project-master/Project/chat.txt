@@ -1,6 +1,0 @@
-alonso boss 100
-alonso boss$ 60
-boss boss$$ 70
-boss$ boss$$$ 120
-barosanu' barosanul 100
-acelasiboss boss$$$ 500
