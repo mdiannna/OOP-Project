@@ -40,7 +40,7 @@ class Persoana
     void isfollowed(Persoana *alta);
     void search_following(string x);
     void search_followers(string x);
-    void show_friends(int no);
+    void show_friends(int no) const;
     static void make_chat(Persoana *a, Persoana *b, int minute);
     static void create_person(char *v);
     static void read_chatting(char *v);
@@ -61,5 +61,6 @@ Persoana * getPersoanaById(int);
 string getPersoanaNameById(int);
 Persoana* getPersoanaByString(string);
 
+void printAllPersons();
 
 #endif // PERSOANA_H_INCLUDED

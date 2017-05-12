@@ -124,6 +124,13 @@ void like_postare(){
     p->addLike();
 }
 
+
+void afiseazaToatePersoanele(){
+    View * view = new AllPersonsView();
+    cout << *view;
+    delete(view);   
+}
+
 void meniu()
 {
     int choice = 0;
@@ -165,10 +172,12 @@ void meniu()
             like_postare();
             break;
         case 9:
-
+            afiseazaToatePersoanele();
+            break;
+        case 10:
             break;
         default:
             printError("Enter a valid selection!!!");
         }
-    }while(choice != 9);
+    }while(choice != 10);
 }

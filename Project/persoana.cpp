@@ -20,7 +20,7 @@ mutex Persoana:: global_mutex;
 ostream &operator<<(ostream &out, const Persoana& pers){
 
 
-    out<<"Persoana are numele "<<name<<"\n";
+    out<<"Persoana are numele "<<pers.name<<"\n";
     out<<"Top 10 prieteni, dupa conversatii sunt\n";
 
     pers.show_friends(10);
@@ -169,7 +169,7 @@ void chat(Persoana *a, Persoana *b, int minute)
     t2.join();
 }
 
-void Persoana::show_friends(int no)
+void Persoana::show_friends(int no) const
 {
     cout<<"top "<<no<<" ai lui "<<this->name<<"\n";
     std::set<paire>::iterator it=ordonati.begin();
@@ -308,4 +308,11 @@ void Persoana::read_chatting(char *v)
     fst.clear();
     sec.clear();
     mn.clear();
+}
+void printAllPersons(){
+    for(auto it: Persoana::exist)
+    {
+        cout<< it.first << " ";
+        cout << (it.second) <<"\n";
+    }
 }

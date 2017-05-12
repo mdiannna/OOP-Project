@@ -2,6 +2,7 @@
 #include "console.h"
 #include "postare.h"
 #include "comentariu.h"
+#include "persoana.h"
 
 View::View(string title){
 	this->title = title;
@@ -87,13 +88,22 @@ void CommentView::render_content() const
         printWhite("6. Afiseaza persoane sugerate pentru a fi urmarite\n");
         printWhite("7. Afiseaza o persoana sugerata pentru a fi urmarita\n");
         printWhite("8. Adauga like la postare\n");
-        printYellow("9. Exit\n");
+        printWhite("9. Afiseaza toate persoanele\n");
+    
+        printYellow("10. Exit\n");
         printBlue("=======================\n");
         printBlue("Enter your selection:\n");
  }
 
  void MenuView::render_footer() const{
+	// No footer for this class
+ }
 
+
+ void AllPersonsView::render_content() const{
+    printBlue("-----AFISARE TOATE PERSOANELE-------:\n");
+ 	printAllPersons();
+ 	printBlue("-------------------------------------\n");
  }
 
 

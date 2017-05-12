@@ -25,11 +25,6 @@ void sandbox()
     Persoana *alex=new Persoana("alex");
 
 
-    // for(auto it: Persoana::exist)
-    // {
-    //     cout<< it.first << " " << it.second <<"\n";
-    // }
-
 
     ion->follow(albert);
     ion->follow(albert2);
@@ -54,6 +49,9 @@ void sandbox()
     Persoana::read_chatting("chat.txt");
 
     Persoana::read_followings("follow.txt");
+
+
+    printAllPersons();
 }
 
 void test_comentarii()

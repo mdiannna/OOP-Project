@@ -101,4 +101,19 @@ public:
 
 
 
+/**********************************/
+//class AllPersonsView
+/**********************************/
+class AllPersonsView : public View
+{
+public:
+    AllPersonsView(string title): View(title){}
+    AllPersonsView(): View("All Persons View: "){}
+
+    void render_content() const;
+};
+
+
+
+
 #endif
