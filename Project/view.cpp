@@ -91,5 +91,9 @@ void CommentView::render_content() const
         printBlue("Enter your selection:\n");
  }
 
+ void MenuView::render_footer() const{
+
+ }
+
 
 

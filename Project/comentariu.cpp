@@ -64,7 +64,7 @@ int Comentariu::getNoLikes() const
     return no_likes;
 }
 
-string Comentariu::getText()
+string Comentariu::getText() const
 {
     return text;
 }
@@ -121,7 +121,7 @@ ostream &operator <<(ostream & out, const Comentariu &comm)
     printRed(tt);
     out << " \n";
     out << "          ";
-    out << comm.text << "\n\n";
+    out << comm.getText() << "\n\n";
     out << "          ";
     printCyan(nr);
     if(nr >= 1 || nr == 0)printCyan(" likes\n\n");
@@ -130,6 +130,43 @@ ostream &operator <<(ostream & out, const Comentariu &comm)
 
     return out;
 }
+
+
+
+ostream &operator <<(ostream & out, const Comentariu * comm)
+{
+    // cout  << "ID postare:" << comm->post_id << "\n";
+    // Persoana *pers = pers->give_back[comm->author_id];
+    // string nume = pers->who[pers->indice];
+
+    Date d = comm->getDate();
+    string dd = convertDateToString(d);
+
+    Time t = comm->getTime();
+    string tt = convertTimeToString(t);
+
+    int nr = comm->getNoLikes();
+
+    out << "--------------COMMENT----" << comm->getId() << "--------\n";
+    out << "          ";
+    // printBlue("@" + nume);
+    out << "          ";
+    printGreen(dd);
+    out << "          ";
+    printRed(tt);
+    out << " \n";
+    out << "          ";
+    out << comm->getText() << "\n\n";
+    out << "          ";
+    printCyan(nr);
+    if(nr >= 1 || nr == 0)printCyan(" likes\n\n");
+    else printCyan(" like\n\n");
+    out << "\n---------------------------------\n";
+
+    return out;
+}
+
+
 
 Comentariu * getComentariuById(int id_cautat)
 {

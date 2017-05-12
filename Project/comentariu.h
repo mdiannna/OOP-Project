@@ -35,7 +35,7 @@ public:
     int getAuthorId() const;
     string getAuthorName();
     int getNoLikes() const;
-    string getText();
+    string getText() const;
     Date getDate() const;
     Time getTime() const;
     list<int> getPeopleLike();
@@ -44,6 +44,8 @@ public:
     void add_like(Persoana *pers);
 
     friend ostream& operator << (ostream &, const Comentariu &);
+    friend ostream &operator <<(ostream &, const Comentariu *);
+
 
 };
 

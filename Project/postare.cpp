@@ -1,4 +1,5 @@
 #include "postare.h"
+#include "comentariu.h"
 
 int Postare::last_id = 0;
 
@@ -141,6 +142,7 @@ void Postare::printComments() const{
 	list<int> comments_id = this->getComments();
 	for(list<int>::iterator it = comments_id.begin(); it != comments_id.end(); it++){
 		printCyan(*it);
+		cout << getComentariuById(*it);
 		cout << " ";
 	}
 	cout << "\n";

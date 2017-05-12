@@ -75,7 +75,7 @@ void test_comentarii()
     cout << comm2->getText() << '\n';
 
 
-    Comentariu comm3(ion, 2, "fsfns");
+    // Comentariu comm3(ion, 2, "fsfns");
 
 }
 

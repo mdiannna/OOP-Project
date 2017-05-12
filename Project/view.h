@@ -19,12 +19,12 @@ public:
 	void setTitle(string);
 	string getTitle() const;
 
-	//same for each view
-	void render_header()  const;
+	//(almost) same for each view
+	virtual void render_header()  const;
 	// customized for each view
 	virtual void render_content() const;
-	//same for each view
-	void render_footer() const;
+	//(almost) same for each view
+	virtual void render_footer() const;
 
 
 	friend ostream& operator<<(ostream&, const View&);
@@ -93,6 +93,7 @@ public:
 	MenuView(string title) : View(title){}
 	MenuView() : View("Console Tweet 2017 Menu"){}
 	void render_content() const;
+	void render_footer() const;
 };
 
 
