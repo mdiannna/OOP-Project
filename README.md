@@ -1,7 +1,7 @@
 <snippet>
   <content><![CDATA[
-  
-## Console Twitter FMI
+
+# ${1:Console Twitter FMI}
 Simulation of Twitter in Console
 
 ## Usage
