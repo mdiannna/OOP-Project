@@ -1,7 +1,9 @@
 <snippet>
   <content><![CDATA[
-## ${1: Console Twitter FMI}
+  
+## Console Twitter FMI
 Simulation of Twitter in Console
+
 ## Usage
 WARNING: The colors library will work on most UNIX systems but
 	is not supported in Win32 console component of Microsoft Windows 
