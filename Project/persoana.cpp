@@ -31,6 +31,13 @@ string getPersoanaNameById(int id)
 }
 
 
+Persoana* getPersoanaByString(string x)
+{
+    Persoana *pers = new Persoana();
+    return pers->give_back[pers->exist[x]];
+}
+
+
 
 Persoana* Persoana::getPersoanaByNo(int no)
 {

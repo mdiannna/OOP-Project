@@ -62,8 +62,7 @@ void apreciaza_comentariu()
 
 void afiseaza_sugestii()
 {
-    system("reset"); //system("cls");
-
+    
     cout << "Introduceti numele persoanei pentru care sa se afiseze sugestii: ";
     string nume;
     cin >> nume;
@@ -75,7 +74,7 @@ void afiseaza_sugestii()
 
 void afiseaza_sugestie()
 {
-     system("reset"); //system("cls");
+     system("reset"); 
 
     cout << "Introduceti numele persoanei pentru care sa se afiseze o sugestie: ";
     string nume;
@@ -113,7 +112,7 @@ void meniu()
 
         cin >> choice;
         cout << '\n';
-        // system("clear");
+        system("reset");
 
         switch(choice)
         {

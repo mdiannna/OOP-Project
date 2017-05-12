@@ -31,6 +31,7 @@ class Persoana
     trie *followers, *following;
     set<int> list_follow;
 
+    Persoana(){}
     Persoana(string nume);
 
     Persoana* getPersoanaByNo(int no);
@@ -56,7 +57,7 @@ class Persoana
 // Non class member functions
 Persoana * getPersoanaById(int);
 string getPersoanaNameById(int);
-
+Persoana* getPersoanaByString(string);
 
 
 #endif // PERSOANA_H_INCLUDED
