@@ -114,6 +114,16 @@ void afiseazaPostareCuId(){
     // delete(view);
 }
 
+
+void like_postare(){
+    cout << "Introduceti id-ul postarii ";
+    int id;
+    cin >> id;
+
+    Postare *p = getPostareById(id);
+    p->addLike();
+}
+
 void meniu()
 {
     int choice = 0;
@@ -151,11 +161,14 @@ void meniu()
         case 7:
             afiseaza_sugestie();
             break;
-        case 8:
+        case 8: 
+            like_postare();
+            break;
+        case 9:
 
             break;
         default:
             printError("Enter a valid selection!!!");
         }
-    }while(choice != 8);
+    }while(choice != 9);
 }
