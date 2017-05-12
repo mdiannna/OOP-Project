@@ -131,16 +131,17 @@ void afiseazaToatePersoanele(){
     delete(view);   
 }
 
+
 void meniu()
 {
+    system("reset");
+
     int choice = 0;
+    View * meniu = new MenuView();
 
     do
     {
-        View * meniu = new MenuView();
         cout << *meniu;
-
-        delete(meniu);
 
         cin >> choice;
         cout << '\n';
@@ -180,4 +181,5 @@ void meniu()
             printError("Enter a valid selection!!!");
         }
     }while(choice != 10);
+    delete(meniu);
 }
