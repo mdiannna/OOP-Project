@@ -31,8 +31,8 @@ void adauga_comentariu()
     cin >> text;
 
     Comentariu *c = new Comentariu(p, id, text);
-    Postare *post = getPostareById(id);
-    post->addComment(c->getId());
+    // Postare *post = getPostareById(id);
+    // post->addComment(c->getId());
 }
 
 
