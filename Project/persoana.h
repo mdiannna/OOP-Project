@@ -38,8 +38,8 @@ class Persoana
     Persoana* getPersoanaByString(string x);
     void follow(Persoana *alta);
     void isfollowed(Persoana *alta);
-    void search_following(string x);
-    void search_followers(string x);
+    void search_following(string x) const;
+    void search_followers(string x) const;
     void show_friends(int no) const;
     static void make_chat(Persoana *a, Persoana *b, int minute);
     static void create_person(char *v);

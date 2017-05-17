@@ -21,19 +21,20 @@ ostream &operator<<(ostream &out, const Persoana& pers){
 
 
     out<<"Persoana are numele "<<pers.name<<"\n";
-    out<<"Top 10 prieteni, dupa conversatii sunt\n";
-
+    out<<"Dupa conversatii sunt ";
     pers.show_friends(10);
     out<<"\n";
+
+    pers.search_followers("");
+    pers.search_following("");
+
+    out<<"\n\n\n";
 
     return out;
 }
 
 
 //afisare
-
-
-
 
 
 Persoana* getPersoanaById(int id)
@@ -120,17 +121,17 @@ void Persoana::isfollowed(Persoana *alta)
     followers->insert(alta->name, alta->indice);
 }
 
-void Persoana::search_following(string x)
+void Persoana::search_following(string x) const
 {
-    cout<<"oameni urmariti care incep cu prefixul \""<<x<<"\" \n";
+    cout<<"oameni urmariti de "<<this->name<<" care incep cu prefixul \""<<x<<"\" \n";
     following->search(x);
 
     cout<<"\n";
 }
 
-void Persoana::search_followers(string x)
+void Persoana::search_followers(string x) const
 {
-    cout<<"oameni care ma urmaresc si incep cu prefixul \""<<x<<"\" \n";
+    cout<<"oameni care il urmaresc pe "<<this->name<<" si incep cu prefixul \""<<x<<"\" \n";
     followers->search(x);
 
     cout<<"\n";
@@ -179,11 +180,18 @@ void Persoana::show_friends(int no) const
         cout<<"none\n";
     }
 
-    for(int i=1; i<=no && it!=ordonati.end(); i++)
+    int i;
+
+    for(i=1; i<=no && it!=ordonati.end(); i++)
     {
         cout<<it->nume<<" "<<it->scor<<"\n";
         it++;
     }
+    if(i!=no+1)
+    {
+        cout<<"nu mai sunt alti prieteni de afisat\n";
+    }
+
     cout<<"\n";
 }
 
@@ -315,4 +323,6 @@ void printAllPersons(){
         cout<< it.first << " ";
         cout << (it.second) <<"\n";
     }
+
+    cout<<"\n";
 }

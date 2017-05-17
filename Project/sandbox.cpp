@@ -41,17 +41,23 @@ void sandbox()
     chat(ali,ion, 20);
     chat(ali, albert, 100);
 
-    ion->show_friends(10);
+    ion->show_friends(15);
 
     ion->search_following("al");
+    albu->search_followers("");
 
     Persoana::create_person("nume.txt");
+
+    Persoana *boss=getPersoanaByString("boss");
+
     Persoana::read_chatting("chat.txt");
 
     Persoana::read_followings("follow.txt");
 
-
     printAllPersons();
+
+    cout<<*albert;
+    cout<<*boss;
 }
 
 void test_comentarii()
