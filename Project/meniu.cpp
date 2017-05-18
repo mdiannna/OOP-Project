@@ -26,7 +26,7 @@ void adauga_comentariu()
     int id;
     cin >> id;
     cout << "\nIntroduceti comentariul:\n";
-// 
+//
     string text;
     cin >> text;
 
@@ -128,8 +128,38 @@ void like_postare(){
 void afiseazaToatePersoanele(){
     View * view = new AllPersonsView();
     cout << *view;
-    delete(view);   
+    delete(view);
 }
+
+
+
+void adaugaPersoana()
+{
+    cout<<"Introduceti numele persoanei\n";
+
+    string x;
+    cin>>x;
+
+    Persoana *act= new Persoana(x);
+
+    cout<<"Persoana "<<act->name<<" a fost adaugata in lista\n";
+}
+
+
+void adaugaFollow()
+{
+    cout<<"Introduceti cine pe cine urmareste\n";
+
+    string x,y;
+
+    cin>>x>>y;
+
+    Persoana *a=getPersoanaByString(x);
+    Persoana *b=getPersoanaByString(y);
+
+    a->follow(b);
+}
+
 
 
 void meniu()
@@ -166,20 +196,27 @@ void meniu()
             break;
         case 6:
             afiseaza_sugestii();
+            break;
         case 7:
             afiseaza_sugestie();
             break;
-        case 8: 
+        case 8:
             like_postare();
             break;
         case 9:
             afiseazaToatePersoanele();
             break;
         case 10:
+            adaugaPersoana();
+            break;
+        case 11:
+            adaugaFollow();
+            break;
+        case 12:
             break;
         default:
             printError("Enter a valid selection!!!");
         }
-    }while(choice != 10);
+    }while(choice != 12);
     delete(meniu);
 }

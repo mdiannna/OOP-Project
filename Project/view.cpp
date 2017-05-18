@@ -89,8 +89,12 @@ void CommentView::render_content() const
         printWhite("7. Afiseaza o persoana sugerata pentru a fi urmarita\n");
         printWhite("8. Adauga like la postare\n");
         printWhite("9. Afiseaza toate persoanele\n");
+        printWhite("10. Adauga o persoana\n");
+        printWhite("11. Follow persoana\n");
     
-        printYellow("10. Exit\n");
+        
+        printYellow("12. Exit\n");
+
         printBlue("=======================\n");
         printBlue("Enter your selection:\n");
  }
