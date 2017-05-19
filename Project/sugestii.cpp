@@ -29,11 +29,11 @@ Sugestie::Sugestie(Persoana *pers)
     it2 = f1.begin();
     while(it2 != f1.end())
     {
-        if(*it < *it2)
+        if(it!=f.end() && *it < *it2)
         {
              it++;
         }
-        else if(*it2 == *it)
+        else if(it!=f.end() && *it2 == *it )
         {
             it2++;
             it++;
@@ -41,7 +41,7 @@ Sugestie::Sugestie(Persoana *pers)
         else
         {
             sugestii.push_back(*it2);
-            it++;
+            it2++;
         }
     }
 }
@@ -54,7 +54,7 @@ void Sugestie::afiseaza_toate_sugestiile()
         vector<int> ::iterator i;
         for(i = sugestii.begin(); i != sugestii.end(); i++)
         {
-            cout << getPersoanaNameById(*i) << "\n";
+            cout << getPersoanaNameById(*i ) << "\n";
         }
         cout << '\n';
     }
@@ -71,7 +71,7 @@ void Sugestie::afiseaza_sugestie()
     {
         srand (time(NULL));
         int i = rand() % n;
-        cout << "Sugestie: \n" << getPersoanaNameById(i) << '\n';
+        cout << "Sugestie: \n" << getPersoanaNameById(sugestii[i]) << '\n';
     }
     else
     {
