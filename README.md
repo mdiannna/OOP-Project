@@ -1,6 +1,6 @@
-
 # Console Twitter FMI
-Simulation of Twitter in Console
+Simulation of Twitter in Console <br>
+(This is a project for University made by students for learning purposes)
 
 ## Usage
 WARNING: The colors library will work on most UNIX systems but
